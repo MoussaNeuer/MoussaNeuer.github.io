@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Moussa LO - Développeur & Web Designer</title>
+    <meta name="description" content="Portfolio de Moussa LO, développeur web et designer créatif. Découvrez mes projets et compétences.">
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon (à créer plus tard) -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Portfolio<span class="dot">.</span></a>
+            
+            <div class="nav-links">
+                <a href="#home">Accueil</a>
+                <a href="#about">À propos</a>
+                <a href="#projects">Projets</a>
+                <a href="#skills">Compétences</a>
+                <a href="#contact">Contact</a>
+                
+                <!-- Mode Sombre/Clair (Optionnel) -->
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            
+            <!-- Menu Mobile -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-link">Accueil</a>
+        <a href="#about" class="mobile-link">À propos</a>
+        <a href="#projects" class="mobile-link">Projets</a>
+        <a href="#skills" class="mobile-link">Compétences</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        
+        <!-- Toggle theme en mobile -->
+        <button class="theme-toggle mobile" id="themeToggleMobile">
+            <i class="fas fa-moon"></i> Mode Sombre
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h3 class="greeting">Bonjour, je suis</h3>
+                    <h1 class="hero-title">
+                        <span class="name-highlight">Moussa LO</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Je crée des expériences web innovantes qui allient design esthétique 
+                        et développement performant. Passionné par la création d'interfaces 
+                        intuitives et de code élégant.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            Voir mes projets <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Me contacter <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                
+               <div class="hero-image">
+    <div class="image-wrapper">
+        <!-- VOTRE PHOTO -->
+        <div class="photo-frame">
+            <img src="assets/images/moussa.webp" alt="Moussa - Développeur & Designer" class="profile-photo">
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+        </div>
+        <!-- Badge animé -->
+        <div class="floating-badge">
+            <i class="fas fa-code"></i>
+            <span>Disponible</span>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À propos de moi</h2>
+                <p class="section-subtitle">Mon parcours et ma passion</p>
+            </div>
+            
+            <div class="about-content">
+               <div class="about-image">
+    <div class="about-img-wrapper">
+        <img src="assets/images/about.jpg" alt="Moussa LO au travail" class="about-photo">
+        <!-- Badge d'expérience -->
+        <div class="experience-badge">
+            <span class="exp-number">3+</span>
+            <span>ans d'expérience</span>
+        </div>
+    </div>
+</div>
+                
+                <div class="about-text">
+                    <h3>Développeur Créatif & Designer UX/UI</h3>
+                    <p>
+                        Avec 3 années d'expérience dans le développement web et le design, 
+                        je combine sens esthétique et expertise technique pour créer des 
+                        solutions digitales qui répondent aux besoins des utilisateurs.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="20">3</span>+
+                            <span class="stat-label">Projets réalisés</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="3">2</span>+
+                            <span class="stat-label">Années d'expérience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="15">3</span>+
+                            <span class="stat-label">Clients satisfaits</span>
+                        </div>
+                    </div>
+                    
+                    <a href="assets/docs/cv.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i> Télécharger mon CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes compétences</h2>
+                <p class="section-subtitle">Technologies et outils que j'utilise</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Compétences seront ajoutées via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes projets</h2>
+                <p class="section-subtitle">Une sélection de mes réalisations</p>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Les projets seront ajoutés via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contactez-moi</h2>
+                <p class="section-subtitle">Travaillons ensemble !</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Parlons de votre projet</h3>
+                    <p>
+                        Vous avez une idée de projet ? N'hésitez pas à me contacter. 
+                        Je serais ravi de discuter de vos besoins et de vous proposer 
+                        une solution sur mesure.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>moussaneuer06@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+221 76 846 18 53</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localisation</h4>
+                                <p>Dakar, Sénégal</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/MoussaNeuer" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/moussa-neuer-lo-b8b0b93a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://dribbble.com/moussa-neuer-lo" target="_blank" class="social-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="https://x.com/neuerlo?s=21" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+    <div class="form-group">
+        <input type="text" id="name" name="user_name" placeholder="Votre nom" required>
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" name="user_email" placeholder="Votre email" required>
+    </div>
+    <div class="form-group">
+        <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+    </div>
+    <div class="form-group">
+        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">
+        <span class="btn-text">Envoyer le message</span>
+        <i class="fas fa-paper-plane"></i>
+    </button>
+    <!-- Honeypot field pour les bots -->
+<div style="position: absolute; left: -5000px;" aria-hidden="true">
+    <input type="checkbox" name="bot_check" tabindex="-1" autocomplete="off">
+</div>
+
+<!-- Validation côté client additionnelle -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    const honeypot = document.querySelector('input[name="bot_check"]');
+    if (honeypot.checked) {
+        e.preventDefault();
+        console.log('Bot détecté');
+        return false;
+    }
+});
+</script>
+</form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">Portfolio<span class="dot">.</span></a>
+                    <p>Créer des expériences digitales mémorables.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="#home">Accueil</a>
+                        <a href="#about">À propos</a>
+                        <a href="#projects">Projets</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Ressources</h4>
+                        <a href="assets/docs/cv.pdf" download>Mon CV</a>
+                        <a href="#privacy">Politique de confidentialité</a>
+                        <a href="#terms">Mentions légales</a>
+                    </div>
+                </div>
+            </div>
+
+        <!-- ===== RÉSEAUX SOCIAUX ===== -->
+<div class="social-footer-section">
+    <h4 class="social-title">Suivez-moi sur les réseaux</h4>
+    <p class="social-subtitle">Restons connectés !</p>
+    
+    <div class="social-icons-grid">
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@__moussa__31?_r=1&_t=ZS-93JnZztJ6Ie" target="_blank" class="social-icon tiktok" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+            <span class="social-tooltip">TikTok</span>
+            <div class="social-pulse"></div>
+        </a>
+        
+        <!-- WhatsApp -->
+        <a href="https://wa.me/221768461853" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="social-tooltip">WhatsApp</span>
+            <div class="social-pulse"></div>
+        </a>
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/__moussa__31?igsh=cmo4Yjh5cjNmand2&utm_source=qr" target="_blank" class="social-icon instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            <span class="social-tooltip">Instagram</span>
+            <div class="social-pulse"></div>
+        </a>
+        
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/14SMR2QqzCU/?mibextid=wwXIfr" target="_blank" class="social-icon facebook" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span class="social-tooltip">Facebook</span>
+            <div class="social-pulse"></div>
+        </a>
+    </div>
+    
+    <!-- Légende animée -->
+    <div class="social-caption">
+        <i class="fas fa-heartbeat"></i>
+        <span class="typing-caption" id="typingCaption"></span>
+    </div>
+</div>
+
+<div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Moussa LO. Tous droits réservés.  +221 76 846 18 53</p>
+                <p>Fait avec <i class="fas fa-heart"></i> et beaucoup de <i class="fas fa-coffee"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
