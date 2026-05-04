@@ -1,3 +1,14 @@
+/* ===== FONT OPTIMIZATION ===== */
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+}
+
 /* ===== RESET & BASE STYLES ===== */
 :root {
     /* Couleurs Light Mode */
@@ -82,6 +93,30 @@ ul {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+}
+
+/* Lazy loading images */
+img[data-src] {
+    background-color: var(--gray-light);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+img.loaded {
+    animation: none;
+}
+
+@keyframes imageFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+img.loaded {
+    animation: imageFadeIn 0.5s ease-in;
 }
 
 .container {

@@ -1,0 +1,29 @@
+# Robots.txt for Moussa LO Portfolio
+# https://moussa-lo.com/
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /sitemap.xml
+
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /private/
+
+# Spécifique à Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Spécifique à Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Règles générales pour les autres bots
+User-agent: *
+Crawl-delay: 5
+Request-rate: 1/5s
+
+# Sitemap
+Sitemap: https://moussa-lo.com/sitemap.xml
