@@ -95,3 +95,60 @@ Chaque projet doit préciser : objectif, rôle personnel, état, technologies r�
 - Comptes sociaux à afficher.
 - Photo professionnelle ou absence de photo.
 - Disponibilité réelle pour nouveaux projets.
+
+## 12. Bilan de mise en œuvre — 28 octobre 2026
+
+### Statut
+
+La refonte est implémentée sur la branche `portfolio-v2`. **Aucune publication n'a été effectuée.** `main` reste sur la V1 et une branche `backup-v1` permet le retour arrière.
+
+### Livrables produits
+
+| Livrable | Fichier |
+|---|---|
+| Page complète | `index.html` |
+| Design system et responsive | `styles.css` |
+| Interactions | `script.js` |
+| Audit initial et corrections | `AUDIT.md` |
+| Architecture et décisions | `ARCHITECTURE.md` |
+| Plan de tests | `PLAN_TESTS.md` |
+| Rapport de validation | `VALIDATION.md` |
+| Valeurs à confirmer | `VALEURS_A_CONFIRMER.md` |
+| Documentation | `README.md` |
+| SEO technique | `robots.txt`, `sitemap.xml`, métadonnées dans `index.html` |
+
+### Décisions appliquées
+
+1. **Contenu** : six projets réels, statuts explicites, aucune statistique inventée, aucun témoignage.
+2. **Contact** : formulaire `mailto:` avec repli sans JavaScript ; aucune promesse d'envoi automatique.
+3. **Email** : `ml.moussalo1@gmail.com` retenu provisoirement ; à confirmer.
+4. **CV** : retiré du téléchargement public car obsolète ; remplacé par une demande de CV à jour.
+5. **SeneCard** : dépôt public en 404 ; lien retiré, mention « Dépôt non public ».
+6. **URL** : `https://moussaneuer.github.io/` retenue comme canonical après vérification HTTP 200.
+7. **Assets** : image OG 1200×630, favicons, portrait WebP en deux tailles ; aucune capture non vérifiée.
+8. **Dépendances** : EmailJS, Font Awesome, Google Fonts et CDN supprimés.
+9. **Anciens fichiers** : retirés de la V2, conservés dans `backup-v1`.
+
+### Critères d'acceptation
+
+| Critère | État |
+|---|---|
+| Aucun lien interne cassé | ✅ 22 ancres internes vérifiées |
+| Aucun lien de démonstration fictif | ✅ |
+| Statuts de projets honnêtes | ✅ |
+| Utilisable à 320 px et desktop | ✅ 320/375/768/1024/1440 testés |
+| Navigation clavier et focus visibles | ✅ |
+| Thème clair/sombre fonctionnel | ✅ |
+| Filtres accessibles | ✅ |
+| Formulaire explicite | ✅ |
+| Aucun secret ou clé privée | ✅ |
+| Aucune erreur JavaScript bloquante | ✅ |
+| Lighthouse accessibilité / bonnes pratiques / SEO | ✅ 100 / 100 / 100 |
+| Performance Lighthouse | ⬜ non mesurée |
+| Safari iOS et Chrome desktop réels | ⬜ à faire |
+| Validation manuelle de Moussa | ⬜ requise avant publication |
+
+### Points restants avant publication
+
+Voir [`VALEURS_A_CONFIRMER.md`](VALEURS_A_CONFIRMER.md) et [`VALIDATION.md`](VALIDATION.md). Les principaux : adresse e-mail définitive, CV à jour, rôles et déploiements des projets, disponibilité, comptes sociaux, tests sur appareils réels et mesure de performance après déploiement.
+

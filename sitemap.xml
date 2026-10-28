@@ -1,49 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Page d'accueil -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://moussa-lo.com/</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://moussaneuer.github.io/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://moussa-lo.com/assets/images/moussa.webp</image:loc>
-      <image:title>Moussa LO - Développeur & Designer</image:title>
-    </image:image>
   </url>
-
-  <!-- Section Portfolio -->
-  <url>
-    <loc>https://moussa-lo.com/#projects</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Section Compétences -->
-  <url>
-    <loc>https://moussa-lo.com/#skills</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>quarterly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Section À propos -->
-  <url>
-    <loc>https://moussa-lo.com/#about</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>quarterly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Section Contact -->
-  <url>
-    <loc>https://moussa-lo.com/#contact</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
 </urlset>

@@ -1,454 +1,704 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
-    <!-- Metadata Essentiels -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Portfolio professionnel de Moussa LO - Développeur Full-Stack et Designer UX/UI créatif. Découvrez mes projets innovants en e-commerce, gestion scolaire, et design. Disponible pour collaborations.">
-    <meta name="keywords" content="Développeur Web, Designer UX/UI, Freelance Sénégal, Moussa LO, HTML, CSS, JavaScript, React, PHP, UI Design, Portfolio">
-    <meta name="author" content="Moussa LO">
-    <meta name="theme-color" content="#6C63FF">
-    
-    <!-- Open Graph (Réseaux Sociaux) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://moussa-lo.com">
-    <meta property="og:title" content="Portfolio | Moussa LO - Développeur & Designer UX/UI">
-    <meta property="og:description" content="Découvrez les projets innovants et compétences de Moussa LO, développeur web et designer créatif basé à Dakar, Sénégal.">
-    <meta property="og:image" content="assets/images/og-image.jpg">
-    <meta property="og:locale" content="fr_FR">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://moussa-lo.com">
-    <meta name="twitter:title" content="Portfolio | Moussa LO - Développeur & Designer">
-    <meta name="twitter:description" content="Découvrez les projets et compétences de Moussa LO, développeur web et designer UX/UI.">
-    <meta name="twitter:image" content="assets/images/twitter-image.jpg">
-    <meta name="twitter:creator" content="@neuerlo">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://moussa-lo.com/">
-    
-    <!-- Preconnect & Prefetch -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    
-    <!-- EmailJS -->
-    <script async src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKu8zSmHQ5rdcTT9wJtKQrDc+p+89CGlFZwtsA7jUqU6onHDxFqJ33KFsp7Hg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Moussa LO",
-        "url": "https://moussa-lo.com",
-        "image": "assets/images/moussa.webp",
-        "jobTitle": "Développeur Full-Stack & Designer UX/UI",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Freelance"
-        },
-        "sameAs": [
-            "https://github.com/MoussaNeuer",
-            "https://www.linkedin.com/in/moussa-neuer-lo-b8b0b93a8",
-            "https://twitter.com/neuerlo"
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Support",
-            "email": "moussaneuer06@gmail.com",
-            "telephone": "+221768461853",
-            "areaServed": "SN",
-            "availableLanguage": ["fr", "en"]
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Moussa Lo — Développeur web &amp; designer UI/UX à Dakar</title>
+  <meta name="description" content="Portfolio de Moussa Lo, développeur web et designer UI/UX à Dakar. Sites vitrines, e-commerce et applications de gestion. Découvrez ses projets et Jëf Tech.">
+  <meta name="author" content="Moussa Lo">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0d0c" media="(prefers-color-scheme: dark)">
+
+  <link rel="canonical" href="https://moussaneuer.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Moussa Lo">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://moussaneuer.github.io/">
+  <meta property="og:title" content="Moussa Lo — Développeur web &amp; designer UI/UX à Dakar">
+  <meta property="og:description" content="Sites vitrines, e-commerce et applications de gestion. Portfolio et projets de Moussa Lo, développeur web et designer UI/UX à Dakar.">
+  <meta property="og:image" content="https://moussaneuer.github.io/assets/images/og-cover.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Moussa Lo — développeur web et designer UI/UX à Dakar">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moussa Lo — Développeur web &amp; designer UI/UX">
+  <meta name="twitter:description" content="Sites vitrines, e-commerce et applications de gestion. Portfolio et projets à Dakar.">
+  <meta name="twitter:image" content="https://moussaneuer.github.io/assets/images/og-cover.png">
+  <meta name="twitter:image:alt" content="Moussa Lo — développeur web et designer UI/UX à Dakar">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <link rel="preload" as="image" href="assets/images/moussa-480.webp" imagesrcset="assets/images/moussa-480.webp 480w, assets/images/moussa.webp 722w" imagesizes="(max-width: 900px) 82vw, 360px" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var stored = localStorage.getItem('theme');
+        var dark = stored === 'dark' || (stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        root.dataset.theme = dark ? 'dark' : 'light';
+      } catch (error) {
+        root.dataset.theme = 'light';
+      }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "https://moussaneuer.github.io/",
+    "inLanguage": "fr",
+    "name": "Portfolio de Moussa Lo",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Moussa Lo",
+      "url": "https://moussaneuer.github.io/",
+      "image": "https://moussaneuer.github.io/assets/images/moussa.webp",
+      "jobTitle": "Développeur web et designer UI/UX",
+      "email": "mailto:ml.moussalo1@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dakar",
+        "addressCountry": "SN"
+      },
+      "sameAs": [
+        "https://github.com/MoussaNeuer",
+        "https://www.linkedin.com/in/moussa-neuer-lo-b8b0b93a8",
+        "https://x.com/neuerlo"
+      ],
+      "knowsAbout": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "design d'interface",
+        "accessibilité web",
+        "e-commerce",
+        "gestion de projet web"
+      ]
     }
-    </script>
-    
-    <!-- JSON-LD Portfolio -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CreativeWork",
-        "name": "Moussa LO Portfolio",
-        "description": "Portfolio professionnel présentant mes projets en développement web et design UX/UI",
-        "author": {
-            "@type": "Person",
-            "name": "Moussa LO"
-        },
-        "datePublished": "2026-05-04"
-    }
-    </script>
+  }
+  </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Portfolio<span class="dot">.</span></a>
-            
-            <div class="nav-links">
-                <a href="#home">Accueil</a>
-                <a href="#about">À propos</a>
-                <a href="#projects">Projets</a>
-                <a href="#skills">Compétences</a>
-                <a href="#contact">Contact</a>
-                
-                <!-- Mode Sombre/Clair (Optionnel) -->
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-            
-            <!-- Menu Mobile -->
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
+<body id="top">
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
 
-    <!-- Menu Mobile -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#home" class="mobile-link">Accueil</a>
-        <a href="#about" class="mobile-link">À propos</a>
-        <a href="#projects" class="mobile-link">Projets</a>
-        <a href="#skills" class="mobile-link">Compétences</a>
-        <a href="#contact" class="mobile-link">Contact</a>
-        
-        <!-- Toggle theme en mobile -->
-        <button class="theme-toggle mobile" id="themeToggleMobile">
-            <i class="fas fa-moon"></i> Mode Sombre
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Moussa Lo — retour en haut">
+        Moussa Lo<span class="brand-dot" aria-hidden="true">.</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="#apropos">Profil</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="nav-cta" href="#contact">Parlons projet <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <div class="header-tools">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activer le thème sombre" aria-pressed="false">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"></path>
+          </svg>
         </button>
-    </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h3 class="greeting">Bonjour, je suis</h3>
-                    <h1 class="hero-title">
-                        <span class="name-highlight">Moussa LO</span>
-                    </h1>
-                    <h2 class="hero-subtitle">
-                        <span class="typing-text" id="typingText"></span>
-                        <span class="cursor">|</span>
-                    </h2>
-                    <p class="hero-description">
-                        Je crée des expériences web innovantes qui allient design esthétique 
-                        et développement performant. Passionné par la création d'interfaces 
-                        intuitives et de code élégant.
-                    </p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            Voir mes projets <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            Me contacter <i class="fas fa-paper-plane"></i>
-                        </a>
-                    </div>
-                </div>
-                
-               <div class="hero-image">
-    <div class="image-wrapper">
-        <!-- VOTRE PHOTO -->
-        <div class="photo-frame">
-            <img src="assets/images/moussa.webp" alt="Moussa - Développeur & Designer" class="profile-photo">
-        </div>
-        <div class="floating-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-                            <div class="shape shape-3"></div>
-        </div>
-        <!-- Badge animé -->
-        <div class="floating-badge">
-            <i class="fas fa-code"></i>
-            <span>Disponible</span>
-        </div>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+          <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <span class="menu-toggle-label">Menu</span>
+        </button>
+      </div>
     </div>
-</div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Développeur web &amp; designer UI/UX · Dakar</p>
+          <h1 id="hero-title">Moussa Lo<span class="accent">.</span></h1>
+          <p class="hero-lede">Je conçois et développe des sites et applications web <strong>clairs, rapides et faciles à utiliser</strong> — du cadrage du besoin à la mise en ligne.</p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projets">Voir les projets</a>
+            <a class="button button-ghost" href="#contact">Discuter d’un projet</a>
+          </div>
+
+          <dl class="hero-facts">
+            <div>
+              <dt>Basé à</dt>
+              <dd>Dakar, Sénégal</dd>
             </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Sites, e-commerce, outils métier</dd>
+            </div>
+            <div>
+              <dt>Avec</dt>
+              <dd><a href="#apropos">Jëf Tech</a> · initiative de services numériques</dd>
+            </div>
+          </dl>
         </div>
+
+        <figure class="portrait">
+          <div class="portrait-frame">
+            <img
+              src="assets/images/moussa-480.webp"
+              srcset="assets/images/moussa-480.webp 480w, assets/images/moussa.webp 722w"
+              sizes="(max-width: 900px) 82vw, 360px"
+              width="480"
+              height="718"
+              alt="Portrait de Moussa Lo"
+              fetchpriority="high"
+              decoding="async">
+          </div>
+          <figcaption>
+            <span>Moussa Lo</span>
+            <span>Portrait · Dakar</span>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">À propos de moi</h2>
-                <p class="section-subtitle">Mon parcours et ma passion</p>
-            </div>
-            
-            <div class="about-content">
-               <div class="about-image">
-    <div class="about-img-wrapper">
-        <img src="assets/images/about.jpg" alt="Moussa LO au travail" class="about-photo">
-        <!-- Badge d'expérience -->
-        <div class="experience-badge">
-            <span class="exp-number">3+</span>
-            <span>ans d'expérience</span>
+    <section class="section about" id="apropos" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="section-kicker">01 — Profil</p>
+          <h2 id="about-title">Du besoin à l’interface, puis au code.</h2>
+          <p class="section-lede">Je travaille sur des sites vitrines, des boutiques en ligne et des applications de gestion, avec une attention particulière à la clarté, à la performance et à l’accessibilité.</p>
         </div>
-    </div>
-</div>
-                
-                <div class="about-text">
-                    <h3>Développeur Créatif & Designer UX/UI</h3>
-                    <p>
-                        Avec 3 années d'expérience dans le développement web et le design, 
-                        je combine sens esthétique et expertise technique pour créer des 
-                        solutions digitales qui répondent aux besoins des utilisateurs.
-                    </p>
-                    
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number" data-count="20">3</span>+
-                            <span class="stat-label">Projets réalisés</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-count="3">2</span>+
-                            <span class="stat-label">Années d'expérience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-count="15">3</span>+
-                            <span class="stat-label">Clients satisfaits</span>
-                        </div>
-                    </div>
-                    
-                    <a href="assets/docs/cv.pdf" class="btn btn-outline" download>
-                        <i class="fas fa-download"></i> Télécharger mon CV
-                    </a>
-                </div>
+
+        <div class="about-grid">
+          <div class="about-story">
+            <p>Je suis Moussa Lo, développeur web et designer UI/UX basé à Dakar. Je conçois des sites et des applications avec une exigence simple : que l’interface soit claire, que le code reste maintenable et que le projet serve réellement son usage.</p>
+            <p>Je travaille principalement en HTML, CSS, JavaScript et PHP/MySQL. Mes projets vont du site vitrine à la boutique en ligne, en passant par des outils de gestion et des back-offices.</p>
+            <p>Ma formation en informatique appliquée à la gestion des entreprises me donne une lecture complémentaire : comprendre le métier, les contraintes et les personnes qui utiliseront l’outil.</p>
+            <p class="formation">Licence en informatique appliquée à la gestion des entreprises — Groupe ISI <span>(en cours)</span></p>
+          </div>
+
+          <aside class="identity-card" aria-labelledby="identity-title">
+            <h3 id="identity-title">Deux identités, une même exigence</h3>
+
+            <div class="identity">
+              <p class="identity-label">Personnel</p>
+              <p class="identity-name">Moussa Lo</p>
+              <p>Développeur web &amp; designer UI/UX. Interventions en direct, du cadrage à la mise en ligne.</p>
             </div>
+
+            <div class="identity">
+              <p class="identity-label">Initiative</p>
+              <p class="identity-name">Jëf Tech</p>
+              <p>Services numériques : sites vitrines, applications métier, CRM et outils de gestion. Projet en cours de structuration.</p>
+              <a class="text-link" href="https://github.com/MoussaNeuer/jef_tech" target="_blank" rel="noopener noreferrer" aria-label="Voir le dépôt Jëf Tech sur GitHub (nouvel onglet)">Voir le dépôt Jëf Tech <span aria-hidden="true">↗</span></a>
+            </div>
+          </aside>
         </div>
+
+        <ol class="approach" aria-label="Méthode de travail">
+          <li>
+            <span class="approach-number" aria-hidden="true">01</span>
+            <h3>Cadrer</h3>
+            <p>Comprendre le besoin, les utilisateurs et les contraintes avant de dessiner.</p>
+          </li>
+          <li>
+            <span class="approach-number" aria-hidden="true">02</span>
+            <h3>Concevoir</h3>
+            <p>Structurer les contenus, prototyper les parcours et valider les choix.</p>
+          </li>
+          <li>
+            <span class="approach-number" aria-hidden="true">03</span>
+            <h3>Développer</h3>
+            <p>Coder en HTML, CSS, JavaScript ou PHP/MySQL, puis tester les usages réels.</p>
+          </li>
+          <li>
+            <span class="approach-number" aria-hidden="true">04</span>
+            <h3>Livrer</h3>
+            <p>Documenter, transmettre et ajuster après la mise en ligne.</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Mes compétences</h2>
-                <p class="section-subtitle">Technologies et outils que j'utilise</p>
-            </div>
-            
-            <div class="skills-grid">
-                <!-- Compétences seront ajoutées via JavaScript -->
-            </div>
+    <section class="section projects" id="projets" aria-labelledby="projects-title">
+      <div class="shell">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="section-kicker">02 — Projets</p>
+            <h2 id="projects-title">Des projets réels, avec leur état réel.</h2>
+            <p class="section-lede">Six projets sélectionnés. Chaque fiche indique le statut, le rôle lorsqu’il est confirmé, les technologies utilisées et les fonctionnalités réellement présentes.</p>
+          </div>
+          <p class="visual-note">Les visuels des cartes sont des compositions typographiques, pas des captures d’écran.</p>
         </div>
+
+        <div class="filters" role="group" aria-label="Filtrer les projets">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">Tous <span class="filter-count" aria-hidden="true">6</span></button>
+          <button class="filter" type="button" data-filter="services" aria-pressed="false">Services <span class="filter-count" aria-hidden="true">1</span></button>
+          <button class="filter" type="button" data-filter="commerce" aria-pressed="false">E-commerce <span class="filter-count" aria-hidden="true">3</span></button>
+          <button class="filter" type="button" data-filter="gestion" aria-pressed="false">Gestion <span class="filter-count" aria-hidden="true">1</span></button>
+          <button class="filter" type="button" data-filter="concept" aria-pressed="false">Concept <span class="filter-count" aria-hidden="true">1</span></button>
+        </div>
+        <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
+
+        <div class="projects-grid" id="projects-grid">
+          <article class="project" data-category="services">
+            <div class="project-visual project-visual--jef" aria-hidden="true">
+              <span class="project-number">01</span>
+              <span class="project-monogram">JËF</span>
+              <span class="project-visual-label">Visuel typographique</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="status status--progress">En cours</span>
+                <span class="project-category">Services numériques</span>
+              </div>
+              <h3 class="project-title">Jëf Tech</h3>
+              <p class="project-summary">Site vitrine, questionnaire de qualification, CRM et génération de cahier des charges pour une initiative de services numériques.</p>
+              <ul class="tech-list" aria-label="Technologies utilisées">
+                <li>PHP 8</li>
+                <li>MySQL</li>
+                <li>JavaScript</li>
+                <li>Apache</li>
+              </ul>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/MoussaNeuer/jef_tech" target="_blank" rel="noopener noreferrer">Dépôt GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> — Jëf Tech (nouvel onglet)</span></a>
+                <span class="link-muted">Démo non publiée</span>
+              </div>
+              <details class="project-details">
+                <summary>Détails du projet</summary>
+                <div class="details-body">
+                  <p><strong>Objectif :</strong> présenter les services de Jëf Tech, qualifier les demandes et outiller le suivi commercial.</p>
+                  <p><strong>Mon rôle :</strong> conception et développement du site et du back-office.</p>
+                  <p><strong>Fonctionnalités :</strong> site vitrine FR/EN, demande de projet, espace client, pipeline CRM, devis, génération de cahier des charges et administration des contenus.</p>
+                  <p><strong>État :</strong> application PHP/MySQL fonctionnelle en local ; aucun déploiement public n’est confirmé. Le paiement Wave est vérifié manuellement, le webhook automatique n’est pas finalisé.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="project" data-category="gestion">
+            <div class="project-visual project-visual--jumeaux" aria-hidden="true">
+              <span class="project-number">02</span>
+              <span class="project-monogram">LJF</span>
+              <span class="project-visual-label">Visuel typographique</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="status status--progress">En cours</span>
+                <span class="project-category">Gestion</span>
+              </div>
+              <h3 class="project-title">Les Jumeaux Fitness</h3>
+              <p class="project-summary">Application de gestion de salle de sport : adhérents, abonnements, paiements, présence et espace client.</p>
+              <ul class="tech-list" aria-label="Technologies utilisées">
+                <li>PHP 8</li>
+                <li>MySQL</li>
+                <li>API REST</li>
+                <li>Bootstrap 5</li>
+                <li>PWA</li>
+              </ul>
+              <div class="project-links">
+                <span class="link-muted">Démo et dépôt non publiés</span>
+              </div>
+              <details class="project-details">
+                <summary>Détails du projet</summary>
+                <div class="details-body">
+                  <p><strong>Objectif :</strong> centraliser la gestion quotidienne d’une salle : membres, formules, encaissements et présence.</p>
+                  <p><strong>Fonctionnalités :</strong> fiches membres, formules et promotions, abonnements et renouvellements, paiements en espèces ou Wave avec confirmation manuelle, reçus PDF, présence par QR code ou check-in manuel, notifications, exports CSV et espace adhérent.</p>
+                  <p><strong>État :</strong> application développée et testée en local ; le déploiement public reste à confirmer.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="project" data-category="concept">
+            <div class="project-visual project-visual--senecard" aria-hidden="true">
+              <span class="project-number">03</span>
+              <span class="project-monogram">SC</span>
+              <span class="project-visual-label">Visuel typographique</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="status status--prototype">Prototype</span>
+                <span class="project-category">Concept</span>
+              </div>
+              <h3 class="project-title">SeneCard</h3>
+              <p class="project-summary">Concept de carte de visite numérique : profil public, QR code, vCard et formules d’abonnement.</p>
+              <ul class="tech-list" aria-label="Technologies utilisées">
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>JavaScript</li>
+                <li>PayTech (test)</li>
+              </ul>
+              <div class="project-links">
+                <span class="link-muted">Dépôt non public · démo non publiée</span>
+              </div>
+              <details class="project-details">
+                <summary>Détails du projet</summary>
+                <div class="details-body">
+                  <p><strong>Objectif :</strong> permettre à un professionnel de partager ses coordonnées et ses liens via une page publique et un QR code.</p>
+                  <p><strong>Mon rôle :</strong> conception et développement du prototype.</p>
+                  <p><strong>Fonctionnalités :</strong> profil public par nom d’utilisateur, contact et réseaux, galerie, téléchargement vCard, QR code, formules d’abonnement et back-office.</p>
+                  <p><strong>État :</strong> prototype en cours. Les paiements PayTech sont en mode test ; le schéma SQL et certaines pages restent à finaliser. Aucune version publique n’est annoncée.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="project" data-category="commerce">
+            <div class="project-visual project-visual--welli" aria-hidden="true">
+              <span class="project-number">04</span>
+              <span class="project-monogram">WS</span>
+              <span class="project-visual-label">Visuel typographique</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="status status--progress">En cours</span>
+                <span class="project-category">E-commerce</span>
+              </div>
+              <h3 class="project-title">Welli Store</h3>
+              <p class="project-summary">Boutique e-commerce de nutrition sportive : catalogue, panier, parcours de commande et back-office.</p>
+              <ul class="tech-list" aria-label="Technologies utilisées">
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>Bootstrap 5</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <span class="link-muted">Démo et dépôt non publiés</span>
+              </div>
+              <details class="project-details">
+                <summary>Détails du projet</summary>
+                <div class="details-body">
+                  <p><strong>Objectif :</strong> vendre des produits de nutrition sportive en ligne avec une gestion simple des produits, commandes et livraisons.</p>
+                  <p><strong>Fonctionnalités :</strong> catalogue et catégories, fiches produit, panier, checkout en trois étapes, zones de livraison, paiement Wave ou à la livraison, comptes clients, back-office produits, commandes et clients.</p>
+                  <p><strong>État :</strong> interface et back-office en place ; le parcours de commande est encore en cours de finalisation. Aucun déploiement public n’est confirmé.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="project" data-category="commerce">
+            <div class="project-visual project-visual--md" aria-hidden="true">
+              <span class="project-number">05</span>
+              <span class="project-monogram">MD</span>
+              <span class="project-visual-label">Visuel typographique</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="status status--live">Livré</span>
+                <span class="project-category">E-commerce</span>
+              </div>
+              <h3 class="project-title">MD Store</h3>
+              <p class="project-summary">Boutique de maillots de football : catalogue, flocage, panier et commande WhatsApp. Version publique en ligne.</p>
+              <ul class="tech-list" aria-label="Technologies utilisées">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Bootstrap 5</li>
+                <li>PWA</li>
+              </ul>
+              <div class="project-links">
+                <a class="text-link" href="https://moussaneuer.github.io/md-store/" target="_blank" rel="noopener noreferrer" aria-label="Voir la boutique MD Store (nouvel onglet)">Voir la boutique <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://github.com/MoussaNeuer/md-store" target="_blank" rel="noopener noreferrer">Dépôt GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> — MD Store (nouvel onglet)</span></a>
+              </div>
+              <details class="project-details">
+                <summary>Détails du projet</summary>
+                <div class="details-body">
+                  <p><strong>Objectif :</strong> proposer une boutique mobile-first de maillots avec personnalisation et commande directe via WhatsApp.</p>
+                  <p><strong>Mon rôle :</strong> conception et développement web. Boutique portée avec Emad, co-vendeur.</p>
+                  <p><strong>Fonctionnalités :</strong> catalogue, filtres, fiche produit, panier et favoris, choix de la taille, flocage nom et numéro, tarifs dégressifs, commande WhatsApp et installation PWA.</p>
+                  <p><strong>État :</strong> version publique statique en ligne. Une version avec back-office PHP/MySQL (commandes, produits, vendeurs) est développée en local ; son déploiement n’est pas confirmé.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="project" data-category="commerce">
+            <div class="project-visual project-visual--mb" aria-hidden="true">
+              <span class="project-number">06</span>
+              <span class="project-monogram">MB</span>
+              <span class="project-visual-label">Visuel typographique</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="status status--live">Livré</span>
+                <span class="project-category">E-commerce</span>
+              </div>
+              <h3 class="project-title">Moussa Business</h3>
+              <p class="project-summary">Boutique mobile-first de vêtements et sneakers : panier, favoris, livraison et commande WhatsApp.</p>
+              <ul class="tech-list" aria-label="Technologies utilisées">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>localStorage</li>
+                <li>PWA</li>
+              </ul>
+              <div class="project-links">
+                <a class="text-link" href="https://moussaneuer.github.io/MoussaBusiness/" target="_blank" rel="noopener noreferrer" aria-label="Voir la boutique Moussa Business (nouvel onglet)">Voir la boutique <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://github.com/MoussaNeuer/MoussaBusiness" target="_blank" rel="noopener noreferrer">Dépôt GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> — Moussa Business (nouvel onglet)</span></a>
+              </div>
+              <details class="project-details">
+                <summary>Détails du projet</summary>
+                <div class="details-body">
+                  <p><strong>Objectif :</strong> vendre des vêtements de sport et des sneakers avec un parcours court, pensé pour le mobile et finalisé sur WhatsApp.</p>
+                  <p><strong>Mon rôle :</strong> projet solo, conception et développement.</p>
+                  <p><strong>Fonctionnalités :</strong> catalogue Slim Fit, compression et maillots, choix couleur/taille/quantité, recherche et filtres, panier et favoris, zones et frais de livraison, commande WhatsApp, lien de paiement Wave, historique local des commandes, thème sombre et interface FR/EN.</p>
+                  <p><strong>État :</strong> version publique en ligne. Les commandes sont finalisées manuellement sur WhatsApp ; aucun paiement n’est traité automatiquement par le site.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Mes projets</h2>
-                <p class="section-subtitle">Une sélection de mes réalisations</p>
-            </div>
-            
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">Tous</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- Les projets seront ajoutés via JavaScript -->
-            </div>
+    <section class="section skills" id="competences" aria-labelledby="skills-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="section-kicker">03 — Compétences</p>
+          <h2 id="skills-title">Des outils, pas des pourcentages.</h2>
+          <p class="section-lede">Les technologies que j’utilise dans mes projets. Le niveau se lit dans les réalisations, pas dans une jauge arbitraire.</p>
         </div>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Front-end</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Responsive design</li>
+              <li>Accessibilité web</li>
+              <li>PWA</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Back-end &amp; données</h3>
+            <ul>
+              <li>PHP 8</li>
+              <li>MySQL</li>
+              <li>API REST</li>
+              <li>Authentification</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Design &amp; produit</h3>
+            <ul>
+              <li>UI/UX</li>
+              <li>Maquettage</li>
+              <li>Prototypage</li>
+              <li>Cahier des charges</li>
+              <li>Design d’interface</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Outils</h3>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Bootstrap 5</li>
+              <li>WordPress</li>
+              <li>SEO de base</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contactez-moi</h2>
-                <p class="section-subtitle">Travaillons ensemble !</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Parlons de votre projet</h3>
-                    <p>
-                        Vous avez une idée de projet ? N'hésitez pas à me contacter. 
-                        Je serais ravi de discuter de vos besoins et de vous proposer 
-                        une solution sur mesure.
-                    </p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>moussaneuer06@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Téléphone</h4>
-                                <p>+221 76 846 18 53</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Localisation</h4>
-                                <p>Dakar, Sénégal</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://github.com/MoussaNeuer" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/moussa-neuer-lo-b8b0b93a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://dribbble.com/moussa-neuer-lo" target="_blank" class="social-link">
-                            <i class="fab fa-dribbble"></i>
-                        </a>
-                        <a href="https://x.com/neuerlo?s=21" target="_blank" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-    <div class="form-group">
-        <input type="text" id="name" name="user_name" placeholder="Votre nom" required>
-    </div>
-    <div class="form-group">
-        <input type="email" id="email" name="user_email" placeholder="Votre email" required>
-    </div>
-    <div class="form-group">
-        <input type="text" id="subject" name="subject" placeholder="Sujet" required>
-    </div>
-    <div class="form-group">
-        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">
-        <span class="btn-text">Envoyer le message</span>
-        <i class="fas fa-paper-plane"></i>
-    </button>
-    <!-- Honeypot field pour les bots -->
-<div style="position: absolute; left: -5000px;" aria-hidden="true">
-    <input type="checkbox" name="bot_check" tabindex="-1" autocomplete="off">
-</div>
-
-<!-- Validation côté client additionnelle -->
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    const honeypot = document.querySelector('input[name="bot_check"]');
-    if (honeypot.checked) {
-        e.preventDefault();
-        console.log('Bot détecté');
-        return false;
-    }
-});
-</script>
-</form>
-                </div>
-            </div>
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="shell">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="section-kicker">04 — Services</p>
+            <h2 id="services-title">Ce que je peux construire avec vous.</h2>
+            <p class="section-lede">Des projets cadrés, sans dépendance inutile, pensés pour durer et rester simples à maintenir.</p>
+          </div>
+          <p class="visual-note">Chaque mission commence par un échange sur le besoin, le périmètre et les contraintes.</p>
         </div>
+
+        <div class="services-grid">
+          <article class="service">
+            <span class="service-number" aria-hidden="true">01</span>
+            <h3>Site vitrine &amp; portfolio</h3>
+            <p>Présenter une activité, un parcours ou un produit avec une page claire, rapide et bien structurée pour les moteurs de recherche.</p>
+            <a class="text-link" href="#contact" data-service="site">Discuter de ce besoin <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service">
+            <span class="service-number" aria-hidden="true">02</span>
+            <h3>E-commerce &amp; WhatsApp</h3>
+            <p>Catalogue, panier, variantes, livraison et commande WhatsApp, avec une expérience pensée d’abord pour le mobile.</p>
+            <a class="text-link" href="#contact" data-service="ecommerce">Discuter de ce besoin <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service">
+            <span class="service-number" aria-hidden="true">03</span>
+            <h3>Application web métier</h3>
+            <p>Membres, commandes, stocks, contenus ou suivi client : un outil sur mesure avec un back-office adapté à l’usage.</p>
+            <a class="text-link" href="#contact" data-service="application">Discuter de ce besoin <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service">
+            <span class="service-number" aria-hidden="true">04</span>
+            <h3>UI/UX &amp; cadrage</h3>
+            <p>Structurer le besoin, les contenus et les parcours avant de coder, puis produire un cahier des charges exploitable.</p>
+            <a class="text-link" href="#contact" data-service="uiux">Discuter de ce besoin <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#" class="logo">Portfolio<span class="dot">.</span></a>
-                    <p>Créer des expériences digitales mémorables.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <a href="#home">Accueil</a>
-                        <a href="#about">À propos</a>
-                        <a href="#projects">Projets</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Ressources</h4>
-                        <a href="assets/docs/cv.pdf" download>Mon CV</a>
-                        <a href="#privacy">Politique de confidentialité</a>
-                        <a href="#terms">Mentions légales</a>
-                    </div>
-                </div>
-            </div>
-
-        <!-- ===== RÉSEAUX SOCIAUX ===== -->
-<div class="social-footer-section">
-    <h4 class="social-title">Suivez-moi sur les réseaux</h4>
-    <p class="social-subtitle">Restons connectés !</p>
-    
-    <div class="social-icons-grid">
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@__moussa__31?_r=1&_t=ZS-93JnZztJ6Ie" target="_blank" class="social-icon tiktok" aria-label="TikTok">
-            <i class="fab fa-tiktok"></i>
-            <span class="social-tooltip">TikTok</span>
-            <div class="social-pulse"></div>
-        </a>
-        
-        <!-- WhatsApp -->
-        <a href="https://wa.me/221768461853" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-            <span class="social-tooltip">WhatsApp</span>
-            <div class="social-pulse"></div>
-        </a>
-        
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/__moussa__31?igsh=cmo4Yjh5cjNmand2&utm_source=qr" target="_blank" class="social-icon instagram" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-            <span class="social-tooltip">Instagram</span>
-            <div class="social-pulse"></div>
-        </a>
-        
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/share/14SMR2QqzCU/?mibextid=wwXIfr" target="_blank" class="social-icon facebook" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-            <span class="social-tooltip">Facebook</span>
-            <div class="social-pulse"></div>
-        </a>
-    </div>
-    
-    <!-- Légende animée -->
-    <div class="social-caption">
-        <i class="fas fa-heartbeat"></i>
-        <span class="typing-caption" id="typingCaption"></span>
-    </div>
-</div>
-
-<div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Moussa LO. Tous droits réservés.  +221 76 846 18 53</p>
-            </div>
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="section-kicker">05 — Contact</p>
+          <h2 id="contact-title">Parlons d’un projet ou d’une opportunité.</h2>
+          <p class="section-lede">Décrivez le contexte, l’objectif et, si possible, l’échéance. Pour un poste, envoyez directement l’intitulé et le lien de l’offre.</p>
         </div>
-    </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="availability"><span class="availability-dot" aria-hidden="true"></span>Un projet, un poste ou une collaboration ? Écrivez-moi.</p>
 
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">E-mail</span>
+                <a class="contact-value" href="mailto:ml.moussalo1@gmail.com">ml.moussalo1@gmail.com</a>
+                <button class="copy-button" id="copy-email" type="button" data-email="ml.moussalo1@gmail.com" aria-label="Copier l’adresse e-mail ml.moussalo1@gmail.com">Copier</button>
+                <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+              </li>
+              <li>
+                <span class="contact-label">WhatsApp</span>
+                <a class="contact-value" href="https://wa.me/221768461853" target="_blank" rel="noopener noreferrer">+221 76 846 18 53 <span aria-hidden="true">↗</span><span class="visually-hidden"> (WhatsApp, nouvel onglet)</span></a>
+              </li>
+              <li>
+                <span class="contact-label">LinkedIn</span>
+                <a class="contact-value" href="https://www.linkedin.com/in/moussa-neuer-lo-b8b0b93a8" target="_blank" rel="noopener noreferrer">moussa-neuer-lo <span aria-hidden="true">↗</span><span class="visually-hidden"> (LinkedIn, nouvel onglet)</span></a>
+              </li>
+              <li>
+                <span class="contact-label">GitHub</span>
+                <a class="contact-value" href="https://github.com/MoussaNeuer" target="_blank" rel="noopener noreferrer">MoussaNeuer <span aria-hidden="true">↗</span><span class="visually-hidden"> (GitHub, nouvel onglet)</span></a>
+              </li>
+              <li>
+                <span class="contact-label">Localisation</span>
+                <span class="contact-value contact-value--text">Dakar, Sénégal</span>
+              </li>
+            </ul>
+            <p class="cv-line">CV à jour sur demande : <a href="mailto:ml.moussalo1@gmail.com?subject=Demande%20de%20CV%20%E2%80%94%20Moussa%20Lo">demander le CV</a>.</p>
+          </div>
+
+          <div class="contact-form-wrap">
+            <h3>Préparer un message</h3>
+            <p class="form-intro">Ce formulaire prépare un e-mail dans votre logiciel de messagerie. Aucun message n’est envoyé automatiquement par ce site.</p>
+
+            <form class="contact-form" id="contact-form" action="mailto:ml.moussalo1@gmail.com" method="post" enctype="text/plain">
+              <div class="field">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" autocomplete="name" required minlength="2" placeholder="Votre nom">
+              </div>
+
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required placeholder="vous@exemple.com">
+              </div>
+
+              <div class="field">
+                <label for="request-type">Type de demande</label>
+                <select id="request-type" name="request-type">
+                  <option value="site">Site vitrine / portfolio</option>
+                  <option value="ecommerce">E-commerce / commande WhatsApp</option>
+                  <option value="application">Application web métier</option>
+                  <option value="uiux">UI/UX &amp; cadrage</option>
+                  <option value="job">Opportunité professionnelle</option>
+                  <option value="other">Autre demande</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Contexte, objectif, échéance…"></textarea>
+              </div>
+
+              <button class="button button-primary form-submit" type="submit">Préparer l’e-mail</button>
+              <p class="form-hint">Le bouton ouvre votre application e-mail avec un message prérempli. Vous gardez la main avant l’envoi.</p>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="privacy-note">Vos informations ne sont ni stockées ni transmises par ce site.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand brand--footer" href="#top">Moussa Lo<span class="brand-dot" aria-hidden="true">.</span></a>
+          <p>Développeur web &amp; designer UI/UX à Dakar. Sites, e-commerce et applications métier.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Liens de pied de page">
+          <div>
+            <h2>Explorer</h2>
+            <ul>
+              <li><a href="#apropos">Profil</a></li>
+              <li><a href="#projets">Projets</a></li>
+              <li><a href="#competences">Compétences</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Projets en ligne</h2>
+            <ul>
+              <li><a href="https://moussaneuer.github.io/md-store/" target="_blank" rel="noopener noreferrer">MD Store <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://moussaneuer.github.io/MoussaBusiness/" target="_blank" rel="noopener noreferrer">Moussa Business <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://github.com/MoussaNeuer/jef_tech" target="_blank" rel="noopener noreferrer">Jëf Tech <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="mailto:ml.moussalo1@gmail.com">E-mail</a></li>
+              <li><a href="https://wa.me/221768461853" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://www.linkedin.com/in/moussa-neuer-lo-b8b0b93a8" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://github.com/MoussaNeuer" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://x.com/neuerlo" target="_blank" rel="noopener noreferrer">X <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Moussa Lo. Tous droits réservés.</p>
+        <p>Site statique, sans mesure d’audience.</p>
+        <a href="#top">Retour en haut <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

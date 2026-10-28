@@ -1,218 +1,196 @@
-# 🎨 Portfolio - Moussa LO
+# Portfolio — Moussa Lo (V2)
 
-Portfolio personnel présentant mes projets en développement web et design UX/UI.
+Refonte statique du portfolio de **Moussa Lo**, développeur web et designer UI/UX à Dakar.
 
-## ✨ Caractéristiques
+- **URL canonique cible** : <https://moussaneuer.github.io/>
+- **Branche de travail** : `portfolio-v2`
+- **Branche de sauvegarde** : `backup-v1`
+- **État** : refonte terminée, **non publiée**. `main` n'a pas été modifiée.
 
-✅ **Design moderne et responsive** - Adapté à tous les appareils (mobile, tablet, desktop)
-✅ **Dark Mode** - Toggle jour/nuit avec localStorage
-✅ **Animations fluides** - Typing effect, scroll animations, hover effects
-✅ **Formulaire de contact** - Intégration EmailJS pour recevoir les messages
-✅ **Sections complètes** :
-   - Hero avec animation de typing
-   - À propos avec stats animées
-   - Compétences avec barres de progression
-   - Projets filtrables par catégorie
-   - Contact avec formulaire fonctionnel
-   - Footer avec liens réseaux sociaux
+> La version actuellement en ligne est encore la V1.
 
-## 🚀 Technologies utilisées
+## Objectif
 
-- **HTML5** - Sémantique
-- **CSS3** - Flexbox, Grid, Variables CSS, Animations
-- **JavaScript (ES6+)** - Interactions dynamiques
-- **EmailJS** - Service d'envoi d'emails
-- **Font Awesome** - Icônes
-- **Google Fonts** - Polices (Poppins, Inter)
+Présenter de façon honnête et lisible :
 
-## 📁 Structure du projet
+- le profil et la méthode de travail ;
+- six projets réels, avec leur statut réel ;
+- les compétences réellement utilisées ;
+- les services proposés ;
+- un moyen de contact qui ne prétend pas envoyer un e-mail à la place du visiteur.
 
-```
+Aucun chiffre, client, témoignage ou résultat n'est inventé. Les informations non vérifiables sont listées dans [`VALEURS_A_CONFIRMER.md`](VALEURS_A_CONFIRMER.md).
+
+## Stack
+
+- HTML5 sémantique
+- CSS3 (variables, Grid, Flexbox, thèmes)
+- JavaScript natif (IIFE, `"use strict"`, aucune dépendance)
+- Aucun framework, aucun npm, aucun build, aucun back-end
+- Compatible GitHub Pages et ouverture directe de `index.html`
+
+## Structure
+
+```text
 portfolio/
-├── index.html                 # Page principale
-├── README.md                  # Ce fichier
+├── index.html
+├── styles.css
+├── script.js
 ├── assets/
-│   ├── css/
-│   │   └── style.css         # Styles complets (responsive + dark mode)
-│   ├── js/
-│   │   └── main.js           # JavaScript avec toutes les fonctionnalités
-│   ├── images/               # Images et photos
-│   │   ├── moussa.webp       # Photo de profil
-│   │   └── about.jpg         # Photo section À propos
-│   └── docs/
-│       ├── cv.pdf            # CV à télécharger
-│       └── EMAILJS_SETUP.md   # Guide de configuration EmailJS
+│   └── images/
+│       ├── moussa-480.webp
+│       ├── moussa.webp
+│       ├── og-cover.png
+│       ├── favicon.svg
+│       ├── favicon-32.png
+│       └── apple-touch-icon.png
+├── robots.txt
+├── sitemap.xml
+├── .htaccess               # Optionnel, Apache uniquement
+├── README.md
+├── AUDIT.md
+├── ARCHITECTURE.md
+├── PLAN_TESTS.md
+├── VALIDATION.md
+├── VALEURS_A_CONFIRMER.md
+└── CAHIER_DE_REFONTE.md
 ```
 
-## 🎯 Sections du Portfolio
+## Lancer le site en local
 
-### 1. **Navigation (Navbar)**
-- Logo avec style
-- Liens de navigation
-- Toggle Dark/Light Mode
-- Menu mobile responsive
+### Option 1 — serveur local (recommandé)
 
-### 2. **Hero Section**
-- Présentation avec animation de typing
-- Photo de profil avec animation
-- Badges animés (Disponible)
-- Appels à l'action (CTA)
-
-### 3. **À Propos**
-- Photo professionnel
-- Bio courte
-- Stats animées (projets, expérience, clients)
-- Bouton télécharger CV
-
-### 4. **Compétences**
-- Grille de compétences
-- Barres de progression animées
-- Icônes Font Awesome
-- Pourcentages de maîtrise
-
-### 5. **Projets**
-- Grille de projets
-- Filtres par catégorie (Web, Design, Mobile)
-- Cards avec descriptions
-- Tags de technologies
-- Liens démo et code
-
-### 6. **Contact**
-- Formulaire complet avec validation
-- Infos de contact (email, téléphone, localisation)
-- Liens réseaux sociaux
-- Intégration EmailJS
-
-### 7. **Footer**
-- Liens rapides
-- Ressources (CV, mentions légales)
-- Réseaux sociaux avec animations
-- Année dynamique
-- Légende avec typing effect
-
-## ⚙️ Configuration
-
-### Activer le formulaire de contact
-
-📧 **Important** : Le formulaire de contact utilise **EmailJS**. Pour le rendre fonctionnel :
-
-1. Consultez le guide : [`assets/docs/EMAILJS_SETUP.md`](assets/docs/EMAILJS_SETUP.md)
-2. Créez un compte gratuit sur [emailjs.com](https://www.emailjs.com)
-3. Configurez votre service email (Gmail, Outlook, etc.)
-4. Récupérez votre :
-   - **Public Key**
-   - **Service ID**
-   - **Template ID**
-5. Mettez à jour `assets/js/main.js` avec vos identifiants
-
-### Personnaliser les données
-
-#### Compétences
-Modifiez le tableau `skills` dans [`assets/js/main.js`](assets/js/main.js) (ligne ~120) :
-
-```javascript
-const skills = [
-    { name: 'HTML/CSS', level: 95, icon: 'fab fa-html5' },
-    { name: 'PHP', level: 90, icon: 'fab fa-php' },
-    // ... plus de compétences
-];
+```powershell
+cd C:\wamp64\www\portfolio
+python -m http.server 8123 --bind 127.0.0.1
 ```
 
-#### Projets
-Modifiez le tableau `projects` dans [`assets/js/main.js`](assets/js/main.js) (ligne ~150) :
+Puis ouvrir <http://127.0.0.1:8123/>.
 
-```javascript
-const projects = [
-    {
-        title: 'Nom du projet',
-        description: 'Description',
-        category: 'web',      // web, design, ou mobile
-        tech: ['React', 'Node.js'],
-        demoLink: 'https://...',
-        codeLink: 'https://github.com/...'
-    },
-    // ... plus de projets
-];
+Avec WAMP, le dossier est aussi accessible via `http://localhost/portfolio/`.
+
+### Option 2 — ouverture directe
+
+Ouvrir `index.html` dans le navigateur. Le site fonctionne sans serveur ; le lien `mailto:` et les ancres restent opérationnels.
+
+## Fonctionnalités
+
+| Fonction | Détail |
+|---|---|
+| Thème clair/sombre | Bouton accessible, `aria-pressed`, persistance `localStorage` protégée, suivi du thème système. |
+| Navigation mobile | Disclosure non modal, `aria-expanded`, fermeture par Échap, clic extérieur ou clic sur un lien. |
+| Filtres projets | Boutons `aria-pressed`, compteur, annonce `aria-live`. |
+| Formulaire | Prépare un e-mail via `mailto:` ; aucun envoi automatique, aucune donnée stockée. |
+| Copie de l'e-mail | Bouton avec retour visuel et repli manuel si le presse-papiers est indisponible. |
+| Accessibilité | Lien d'évitement, focus visible, labels, contrastes, `prefers-reduced-motion`. |
+| SEO | Title/description uniques, canonical, Open Graph, Twitter, JSON-LD, robots et sitemap. |
+| Impression | Styles dédiés, contrôles masqués. |
+
+## Modifier le contenu
+
+### Projets
+
+Les projets sont écrits directement dans `index.html`, dans `#projects-grid`. Pour en ajouter un :
+
+1. dupliquer un `<article class="project">` ;
+2. renseigner `data-category` (`services`, `commerce`, `gestion` ou `concept`) ;
+3. mettre à jour le statut, le titre, la description, les technologies et les liens ;
+4. ajuster les compteurs des boutons de filtre et le nombre annoncé dans l'introduction.
+
+Statuts disponibles : `status--live` (Livré), `status--progress` (En cours), `status--prototype` (Prototype).
+
+### E-mail et réseaux
+
+L'adresse apparaît dans :
+
+- les liens `mailto:` de `index.html` ;
+- le JSON-LD ;
+- la constante `EMAIL` de `script.js` ;
+- le bouton « Copier ».
+
+Toute modification doit être faite aux quatre endroits.
+
+### URL canonique
+
+Si le domaine change, mettre à jour **ensemble** :
+
+- `<link rel="canonical">` ;
+- `og:url`, `og:image`, `twitter:image` ;
+- le JSON-LD ;
+- `robots.txt` ;
+- `sitemap.xml`.
+
+## Tests
+
+- Plan complet : [`PLAN_TESTS.md`](PLAN_TESTS.md)
+- Résultats et limites : [`VALIDATION.md`](VALIDATION.md)
+- Audit initial et corrections : [`AUDIT.md`](AUDIT.md)
+- Architecture et décisions : [`ARCHITECTURE.md`](ARCHITECTURE.md)
+
+Derniers résultats connus :
+
+| Contrôle | Résultat |
+|---|---|
+| `node --check script.js` | OK |
+| Structure HTML / ancres / assets | 0 erreur |
+| Console navigateur | 0 erreur |
+| 320 / 375 / 768 / 1024 / 1440 px | Aucun débordement horizontal |
+| Lighthouse accessibilité | 100 |
+| Lighthouse bonnes pratiques | 100 |
+| Lighthouse SEO | 100 |
+| Performance Lighthouse | Non mesurée |
+
+## Publication sur GitHub Pages
+
+> **Ne pas publier avant validation.** La branche `main` est intacte et correspond à la V1.
+
+Procédure prévue, après validation :
+
+```powershell
+git switch main
+git merge --no-ff portfolio-v2
+git push origin main
 ```
 
-#### Infos personnelles
-- Modifiez le titre et description dans l'HTML
-- Changez les liens des réseaux sociaux
-- Mettez à jour votre email de contact
+GitHub Pages publiera la branche `main` du dépôt `MoussaNeuer/MoussaNeuer.github.io` (nom à confirmer). Vérifier ensuite :
 
-## 🎨 Dark Mode
+1. l'URL réelle et la redirection HTTPS ;
+2. le canonical, l'Open Graph et le JSON-LD ;
+3. `robots.txt` et `sitemap.xml` ;
+4. l'ouverture du formulaire dans un vrai client e-mail ;
+5. Lighthouse et PageSpeed Insights sur l'URL publiée.
 
-Le mode sombre est automatiquement mémorisé grâce à `localStorage`. Le thème actuel est stocké sous la clé `'theme'`.
+## Sauvegarde et retour arrière
 
-Pour forcer un thème au chargement, modifiez la fonction `initTheme()` dans `main.js`.
+- Branche `backup-v1` : snapshot complet de la V1.
+- Sauvegarde externe : `C:\Users\MOUSSA~1\AppData\Local\Temp\portfolio-v1-backup-20261028-1606` (à vérifier avant suppression).
+- Retour arrière : `git switch backup-v1`.
 
-## 📱 Responsive
+Les anciens fichiers `assets/css/style.css`, `assets/js/main.js`, les documents EmailJS/SEO et le CV obsolète ont été retirés de la V2. Ils restent dans `backup-v1`.
 
-Le portfolio est **100% responsive** avec des breakpoints :
-- **Desktop** : > 992px
-- **Tablet** : 768px - 992px
-- **Mobile** : < 768px
+## Confidentialité
 
-## 🔍 SEO
+- Aucun analytics, aucun cookie, aucun script tiers.
+- Aucune donnée de formulaire n'est stockée ni transmise.
+- Le bouton de copie utilise uniquement le presse-papiers local du navigateur.
+- Les liens externes s'ouvrent dans un nouvel onglet avec `rel="noopener noreferrer"`.
 
-- ✅ Meta tags complets
-- ✅ Descriptions optimisées
-- ✅ Images optimisées
-- ✅ Structure sémantique HTML5
-- 📝 À ajouter : Structured data (JSON-LD), Sitemap XML
+## Limites connues
 
-## 🚀 Déploiement
+- Le formulaire dépend du client de messagerie du visiteur ; il ne remplace pas un service d'envoi.
+- Aucune capture réelle de projet n'est affichée : les visuels sont typographiques et l'indiquent.
+- Le CV public est retiré tant qu'une version à jour n'est pas fournie.
+- Le dépôt SeneCard n'est plus public (404 au 28/10/2026).
+- Les tests Safari iOS, Android et lecteur d'écran restent à faire.
 
-### Déployer sur GitHub Pages
+## Contact
 
-1. Créez un repo `username.github.io`
-2. Poussez ce dossier sur la branche `main`
-3. Votre site sera accessible sur `https://username.github.io`
-
-### Déployer localement (WAMP/XAMPP)
-
-1. Placez le dossier dans `www/` (WAMP) ou `htdocs/` (XAMPP)
-2. Lancez Apache
-3. Accédez à `http://localhost/portfolio/`
-
-## 🐛 Dépannage
-
-**Le formulaire n'envoie pas les emails ?**
-- Vérifiez que EmailJS est configuré correctement
-- Consultez la console du navigateur (F12) pour les erreurs
-- Vérifiez votre connexion internet
-
-**Les animations sont lentes ?**
-- C'est normal sur les vieux appareils
-- Les animations utilisent CSS3 natives et JavaScript optimisé
-
-**Le dark mode ne se souvient pas ?**
-- Vérifiez que localStorage n'est pas désactivé
-- Essayez en mode normal (pas navigation privée)
-
-## 📈 Améliorations futures
-
-- [ ] Blog section
-- [ ] Testimonials clients
-- [ ] Filtres de compétences interactifs
-- [ ] Pagination des projets
-- [ ] Intégration GitHub API pour les repos
-- [ ] Analytics
-- [ ] Performance optimisations
-
-## 📞 Contact
-
-Pour toute question ou collaboration :
-- 📧 Email : ml.moussalo1@gmail.com
-- 📱 WhatsApp : +221 76 846 18 53
-- 🔗 LinkedIn : [Moussa LO](https://www.linkedin.com/in/moussa-neuer-lo-b8b0b93a8)
-- 💻 GitHub : [MoussaNeuer](https://github.com/MoussaNeuer)
-
-## 📄 License
-
-Ce projet est sous licence MIT.
+- E-mail : `ml.moussalo1@gmail.com` *(à confirmer)*
+- WhatsApp : `+221 76 846 18 53`
+- LinkedIn : [moussa-neuer-lo](https://www.linkedin.com/in/moussa-neuer-lo-b8b0b93a8)
+- GitHub : [MoussaNeuer](https://github.com/MoussaNeuer)
 
 ---
 
-**Dernière mise à jour** : Mai 2026  
-**Version** : 1.0
+**Dernière mise à jour** : 28 octobre 2026  
+**Version** : 2.0 — branche `portfolio-v2`, non publiée.
