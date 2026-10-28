@@ -75,7 +75,7 @@ Chaque projet doit préciser : objectif, rôle personnel, état, technologies r�
 - Aucun secret/API privée dans le dépôt.
 - Pas d'erreur JavaScript bloquante dans la console.
 - Tests sur Safari iOS et Chrome desktop.
-- Vérifier Lighthouse (performance, accessibilité, bonnes pratiques, SEO) avant publication ; ne pas annoncer de score avant mesure.
+- Vérifier Lighthouse (performance, accessibilité, bonnes pratiques, SEO) avant et après publication ; ne pas annoncer de score avant mesure.
 
 ## 10. Publication sûre
 1. Télécharger ou cloner le dépôt actuel.
@@ -100,7 +100,7 @@ Chaque projet doit préciser : objectif, rôle personnel, état, technologies r�
 
 ### Statut
 
-La refonte est implémentée sur la branche `portfolio-v2`. **Aucune publication n'a été effectuée.** `main` reste sur la V1 et une branche `backup-v1` permet le retour arrière.
+La refonte est **publiée** sur <https://moussaneuer.github.io/> depuis le 28 octobre 2026. `main` et `portfolio-v2` pointent sur le commit `799eead` ; une branche `backup-v1` permet le retour arrière.
 
 ### Livrables produits
 
@@ -146,9 +146,9 @@ La refonte est implémentée sur la branche `portfolio-v2`. **Aucune publication
 | Lighthouse accessibilité / bonnes pratiques / SEO | ✅ 100 / 100 / 100 |
 | Performance Lighthouse | ⬜ non mesurée |
 | Safari iOS et Chrome desktop réels | ⬜ à faire |
-| Validation manuelle de Moussa | ⬜ requise avant publication |
+| Validation manuelle de Moussa | ✅ publication demandée explicitement le 28/10/2026 |
 
-### Points restants avant publication
+### Points restants après publication
 
 Voir [`VALEURS_A_CONFIRMER.md`](VALEURS_A_CONFIRMER.md) et [`VALIDATION.md`](VALIDATION.md). Les principaux : adresse e-mail définitive, CV à jour, rôles et déploiements des projets, disponibilité, comptes sociaux, tests sur appareils réels et mesure de performance après déploiement.
 

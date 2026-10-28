@@ -1,7 +1,7 @@
 # Plan de tests — Portfolio V2
 
-- **Branche testée** : `portfolio-v2`
-- **Environnement** : navigateur Chromium intégré à l'application, serveur local `python -m http.server 8123`, Windows.
+- **Branches testées** : `portfolio-v2` en local, `main` en ligne (commit `799eead`)
+- **Environnement** : navigateur Chromium intégré à l'application, serveur local `python -m http.server 8123`, site publié <https://moussaneuer.github.io/>, Windows.
 - **Date** : 28 octobre 2026
 - **Statuts** : ✅ exécuté et conforme · ⚠️ partiel ou limite d'environnement · ⬜ restant à faire
 
@@ -108,12 +108,12 @@
 |---|---|---|---|---|
 | T48 | Liens externes | Aucun 404 | ✅ | SeneCard 404 retiré ; LinkedIn 999 = anti-bot, à vérifier manuellement. |
 | T49 | Liens internes | Toutes les ancres existent | ✅ | 22 ancres internes vérifiées. |
-| T50 | GitHub Pages | Site identique à la version locale | ⬜ | Non déployé ; `main` intacte. |
+| T50 | GitHub Pages | Site identique à la version locale | ✅ | Publié sur `main` (commit `799eead`) ; V2 servie en HTTPS, canonical, 6 projets, 25 révélations, 0 erreur console. |
 | T51 | Safari iOS | Mise en page, menu, formulaire | ⬜ | À tester sur appareil réel. |
 | T52 | Android Chrome | Mise en page, menu, formulaire | ⬜ | À tester sur appareil réel. |
-| T53 | Après publication | HTTPS, canonical, sitemap, OG | ⬜ | À faire après fusion sur `main`. |
+| T53 | Après publication | HTTPS, canonical, sitemap, OG, assets | ✅ | Page, `robots.txt`, `sitemap.xml`, `og-cover.png` (1200×630), favicons, portrait, CSS et JS : HTTP 200 ; aucun Mixed Content. |
 
-## 10. Scénario manuel de recette avant publication
+## 10. Scénario manuel de recette après publication
 
 1. Ouvrir le site en `file://` puis via un serveur local.
 2. À 320 px, vérifier l'absence de défilement horizontal et la lisibilité.
@@ -125,5 +125,5 @@
 8. Envoyer un formulaire valide et vérifier le message prérempli dans un vrai client.
 9. Cliquer sur chaque lien externe.
 10. Vérifier le rendu avec `prefers-reduced-motion` activé, puis désactivé.
-11. Lancer Lighthouse sur mobile et desktop, puis PageSpeed Insights après déploiement.
+11. Lancer Lighthouse sur mobile et desktop, puis PageSpeed Insights sur le site publié (accessibilité, bonnes pratiques et SEO déjà à 100 ; performance encore à mesurer).
 12. Vérifier l'image de partage sur LinkedIn et X après publication.

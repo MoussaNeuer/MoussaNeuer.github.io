@@ -1,9 +1,9 @@
 # Rapport de validation — Portfolio V2
 
 - **Date** : 28 octobre 2026
-- **Branche** : `portfolio-v2`
-- **Référence de livraison** : dernier commit de la branche (`git log -1`).
-- **État** : validé pour relecture, **non publié**. `main` n'a pas été modifiée.
+- **Branches** : `main` et `portfolio-v2` (commit `799eead`)
+- **Site en ligne** : <https://moussaneuer.github.io/>
+- **État** : **publié** le 28 octobre 2026.
 
 ## 1. Tests réellement exécutés
 
@@ -94,18 +94,39 @@ Un passage supplémentaire a été effectué après l'ajout des animations, du s
 | `https://github.com/MoussaNeuer` | 200 | Conservé |
 | `https://x.com/neuerlo` | 200 | Conservé |
 
+### 1.6 Vérifications après publication
+
+Contrôles effectués sur <https://moussaneuer.github.io/> après le déploiement du commit `799eead`.
+
+| Contrôle | Résultat |
+|---|---|
+| Réponse HTTP de la page d'accueil | ✅ 200, HTTPS |
+| Canonical servi | ✅ `https://moussaneuer.github.io/` |
+| Version déployée | ✅ V2 détectée (`styles.css`, `script.js`, 6 projets, 25 révélations) |
+| `robots.txt` | ✅ 200, `text/plain`, sitemap déclaré |
+| `sitemap.xml` | ✅ 200, `application/xml`, URL unique |
+| Image Open Graph | ✅ 200, PNG 1200×630 |
+| Favicons et portrait | ✅ 200 (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `moussa.webp`, `moussa-480.webp`) |
+| Formulaire | ✅ Aucun `action="mailto:"` ; repli `.contact-fallback` présent |
+| Console au chargement frais | ✅ 0 erreur, 0 avertissement (avertissement Mixed Content disparu) |
+| Requêtes réseau | ✅ Aucun statut ≥ 400 |
+| Lighthouse accessibilité / bonnes pratiques / SEO | ✅ 100 / 100 / 100, aucun échec |
+| Débordement horizontal | ✅ Aucun |
+| Repli sans JavaScript | ✅ Formulaire masqué, lien e-mail direct visible |
+
+> Le cache GitHub Pages (`max-age=600`) peut retarder la prise en compte d'une nouvelle feuille de style. Les vérifications ci-dessus ont été faites avec un paramètre de version lorsque nécessaire.
+
 ## 2. Tests non exécutés ou partiels
 
 | Test | Raison | À faire |
 |---|---|---|
-| Score de performance Lighthouse / Web Vitals | Non fourni par l'outil intégré | Chrome DevTools ou PageSpeed Insights après déploiement |
+| Score de performance Lighthouse / Web Vitals | Toujours non mesuré ; l'outil intégré ne le fournit pas | PageSpeed Insights sur le site publié |
 | `prefers-reduced-motion` en conditions réelles | Pas d'émulation disponible dans l'outil | DevTools → Rendering → Emulate CSS media feature |
 | Animations sur appareil réel | Pas d'appareil disponible | Vérifier le rendu sur iPhone et Android, y compris le défilement lent |
 | Copie dans le presse-papiers | Permission refusée dans le navigateur de test | Clic réel dans Chrome/Safari |
 | Ouverture réelle du client e-mail | Dépend du système | Test avec Gmail/Outlook/Apple Mail |
 | Safari iOS | Pas d'appareil disponible | iPhone réel ou Simulator |
 | Android Chrome | Pas d'appareil disponible | Appareil réel |
-| GitHub Pages | Aucun déploiement effectué | Fusion sur `main` puis vérification post-publication |
 | Rendu imprimé | Non exporté en PDF | Aperçu avant impression |
 | Ouverture directe en `file://` | Le navigateur intégré refuse les URLs `file://` | Ouvrir `index.html` par double-clic dans Chrome, Edge et Firefox |
 | Lecteur d'écran | Non testé | NVDA/VoiceOver sur les parcours principaux |
@@ -120,12 +141,15 @@ Un passage supplémentaire a été effectué après l'ajout des animations, du s
 
 ## 4. Verdict
 
-La V2 est **prête pour relecture et tests manuels complémentaires**. Les animations, le scrollspy, l'état du header et la navigation fluide ont été vérifiés dans Chromium. Elle ne doit pas être publiée avant :
+La V2 est **publiée** sur <https://moussaneuer.github.io/>. Les animations, le scrollspy, l'état du header et la navigation fluide ont été vérifiés dans Chromium, en local puis en ligne, et les contrôles automatiques passent.
 
-- confirmation de l'adresse e-mail et du CV ;
-- validation des rôles et statuts de projets ;
-- test sur au moins un vrai mobile et un vrai client de messagerie ;
-- mesure de performance sur l'URL déployée ;
-- validation explicite de Moussa.
+Restent à valider manuellement :
 
-Aucune publication n'a été effectuée.
+- l'adresse e-mail définitive et la mise à jour du CV ;
+- les rôles et statuts réels des projets ;
+- au moins un vrai mobile (Safari iOS, Android Chrome) et un vrai client de messagerie ;
+- la performance Lighthouse / Web Vitals sur l'URL publiée ;
+- le rendu de l'image de partage sur LinkedIn et X ;
+- le rendu avec `prefers-reduced-motion` activé et l'aperçu avant impression.
+
+Ces points ne bloquent pas la publication effectuée le 28 octobre 2026 ; ils conditionnent les prochaines corrections de contenu.

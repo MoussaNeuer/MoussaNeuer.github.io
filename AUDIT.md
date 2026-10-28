@@ -4,7 +4,7 @@
 - **Périmètre** : `index.html`, `assets/css/style.css`, `assets/js/main.js`, `assets/docs/`, `assets/images/`, `robots.txt`, `sitemap.xml`, `.htaccess`, documentation.
 - **Branche de sauvegarde** : `backup-v1` (commit `ba5b0a1`)
 - **Branche de travail** : `portfolio-v2`
-- **Publication** : aucune. `main` n'a pas été modifiée et rien n'a été poussé.
+- **Publication** : effectuée le 28 octobre 2026 sur `main` (commit `799eead`), site en ligne sur <https://moussaneuer.github.io/>.
 
 ## 1. Méthode
 

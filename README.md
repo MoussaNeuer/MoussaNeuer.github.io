@@ -2,12 +2,12 @@
 
 Refonte statique du portfolio de **Moussa Lo**, développeur web et designer UI/UX à Dakar.
 
-- **URL canonique cible** : <https://moussaneuer.github.io/>
-- **Branche de travail** : `portfolio-v2`
+- **Site en ligne** : <https://moussaneuer.github.io/>
+- **Branches** : `main` (publication) et `portfolio-v2` (travail), toutes deux au commit `799eead`
 - **Branche de sauvegarde** : `backup-v1`
-- **État** : refonte terminée, **non publiée**. `main` n'a pas été modifiée.
+- **État** : refonte **publiée** le 28 octobre 2026.
 
-> La version actuellement en ligne est encore la V1.
+> GitHub Pages sert la V2 depuis la branche `main` du dépôt `MoussaNeuer/MoussaNeuer.github.io`.
 
 ## Objectif
 
@@ -137,30 +137,38 @@ Derniers résultats connus :
 | Structure HTML / ancres / assets | 0 erreur |
 | Console navigateur | 0 erreur |
 | 320 / 375 / 768 / 1024 / 1440 px | Aucun débordement horizontal |
-| Lighthouse accessibilité | 100 |
-| Lighthouse bonnes pratiques | 100 |
-| Lighthouse SEO | 100 |
+| Lighthouse accessibilité | 100 (local et live) |
+| Lighthouse bonnes pratiques | 100 (local et live) |
+| Lighthouse SEO | 100 (local et live) |
 | Performance Lighthouse | Non mesurée |
+| Version live | HTTP 200, canonical, 6 projets, 0 erreur console |
+| `robots.txt`, `sitemap.xml`, assets | HTTP 200 |
 
 ## Publication sur GitHub Pages
 
-> **Ne pas publier avant validation.** La branche `main` est intacte et correspond à la V1.
+Le site est publié sur <https://moussaneuer.github.io/> depuis la branche `main` du dépôt `MoussaNeuer/MoussaNeuer.github.io`.
 
-Procédure prévue, après validation :
+Procédure utilisée :
 
 ```powershell
+git switch portfolio-v2
+git add -A
+git commit -m "…"
 git switch main
-git merge --no-ff portfolio-v2
+git merge --ff-only portfolio-v2
 git push origin main
+git push origin portfolio-v2
 ```
 
-GitHub Pages publiera la branche `main` du dépôt `MoussaNeuer/MoussaNeuer.github.io` (nom à confirmer). Vérifier ensuite :
+Après un déploiement, vérifier :
 
 1. l'URL réelle et la redirection HTTPS ;
 2. le canonical, l'Open Graph et le JSON-LD ;
-3. `robots.txt` et `sitemap.xml` ;
+3. `robots.txt`, `sitemap.xml` et les assets ;
 4. l'ouverture du formulaire dans un vrai client e-mail ;
 5. Lighthouse et PageSpeed Insights sur l'URL publiée.
+
+> GitHub Pages peut servir un fichier en cache jusqu'à 10 minutes (`Cache-Control: max-age=600`). Ajouter un paramètre de version (`styles.css?v=…`) pour forcer la vérification d'une nouvelle version.
 
 ## Sauvegarde et retour arrière
 
@@ -195,4 +203,4 @@ Les anciens fichiers `assets/css/style.css`, `assets/js/main.js`, les documents 
 ---
 
 **Dernière mise à jour** : 28 octobre 2026  
-**Version** : 2.0 — branche `portfolio-v2`, non publiée.
+**Version** : 2.0 — publiée sur `main` (commit `799eead`).

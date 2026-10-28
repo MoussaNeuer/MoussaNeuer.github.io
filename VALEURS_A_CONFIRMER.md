@@ -1,6 +1,6 @@
-# Valeurs à confirmer avant publication
+# Valeurs à confirmer après publication
 
-Ce document liste les seules informations du site qui ne peuvent pas être prouvées par le code ou les dépôts. Tant qu'elles ne sont pas confirmées, elles ne doivent pas être publiées telles quelles.
+Le site est **publié** sur <https://moussaneuer.github.io/> depuis le 28 octobre 2026 avec les valeurs provisoires ci-dessous. Ce document liste les informations qui ne peuvent pas être prouvées par le code ou les dépôts : elles doivent être confirmées, corrigées ou retirées lors d'une prochaine mise à jour.
 
 ## 1. Coordonnées
 
@@ -60,7 +60,7 @@ Les technologies listées proviennent des projets et du CV :
 |---|---|---|
 | Portrait | `moussa.webp` / `moussa-480.webp` | La photo est-elle autorisée et toujours représentative ? |
 | Captures de projets | Aucune capture réelle ; visuels typographiques assumés | Fournir des captures authentiques si elles doivent remplacer les visuels. |
-| Image OG | `og-cover.png` générée | Valider le rendu sur LinkedIn/X après déploiement. |
+| Image OG | `og-cover.png` générée | Vérifiée en ligne (PNG 1200×630, HTTP 200). Valider le rendu sur LinkedIn/X. |
 | Favicon | SVG + PNG générés | Valider le rendu dans les onglets et sur mobile. |
 
 ## 7. URL et publication
@@ -68,8 +68,8 @@ Les technologies listées proviennent des projets et du CV :
 | Information | Valeur actuelle | À confirmer |
 |---|---|---|
 | URL canonique | `https://moussaneuer.github.io/` | Est-ce l'URL finale ? Un domaine personnalisé est-il prévu ? |
-| Dépôt GitHub Pages | `MoussaNeuer/MoussaNeuer.github.io` (supposé) | Confirmer le nom exact du dépôt et la branche publiée. |
-| Branche de publication | `main` (non modifiée) | La V2 sera-t-elle fusionnée sur `main` ou publiée depuis une autre branche ? |
+| Dépôt GitHub Pages | `MoussaNeuer/MoussaNeuer.github.io` | Confirmer que ce dépôt doit rester le dépôt public. |
+| Branche de publication | `main` (commit `799eead`) | La V2 est publiée depuis `main` ; `portfolio-v2` suit le même commit. |
 | Analytics | Aucun | Faut-il en ajouter un ? Si oui, préciser l'outil et la base légale. |
 
 ## 8. Réseaux sociaux à afficher
