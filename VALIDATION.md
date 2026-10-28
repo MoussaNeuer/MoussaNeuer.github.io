@@ -40,7 +40,7 @@ Environnement : Chromium intégré, viewport de la fenêtre d'aperçu (531 px), 
 | Lien d'évitement | ✅ Premier Tab, focus visible, cible `#main` |
 | Ancres et header sticky | ✅ `#projets` à 88 px du haut |
 | Copie de l'e-mail | ⚠️ Presse-papiers bloqué dans l'outil ; le repli affiche l'adresse et le statut |
-| Sans JavaScript | ✅ Navigation visible, boutons JS masqués, aucun débordement |
+| Sans JavaScript | ✅ Navigation visible, boutons JS masqués, formulaire remplacé par un lien e-mail, aucun débordement |
 | Animations d'entrée du hero | ✅ `rise-soft`, `rise-title` et `portrait-in` appliquées, puis `transform: none` |
 | Révélation au défilement | ✅ 25 cibles au chargement en haut de page ; `.is-visible` ajouté par `IntersectionObserver` |
 | Contenu masqué par erreur | ✅ Aucun élément `.reveal` non révélé présent dans la fenêtre, même après saut direct en bas de page |

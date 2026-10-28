@@ -71,7 +71,7 @@
 |---|---|---|---|---|
 | T34 | Soumission vide | Message d'erreur, pas d'ouverture d'e-mail | ✅ | « Merci de compléter les champs signalés. » |
 | T35 | Formulaire valide | Statut de succès, `mailto:` préparé | ✅ | Aucune navigation parasite, 0 erreur console. |
-| T36 | Repli sans JavaScript | `action="mailto:"`, `method="post"`, `enctype="text/plain"` | ✅ | Attributs présents dans le HTML. |
+| T36 | Repli sans JavaScript | Formulaire masqué, lien e-mail direct visible | ✅ | `html:not(.js)` masque le formulaire et affiche `.contact-fallback` ; aucun formulaire sans effet. |
 | T37 | Copie de l'e-mail | Adresse copiée, statut affiché | ⚠️ | Le presse-papiers est bloqué dans le navigateur de test ; le repli affiche correctement l'adresse. À revalider dans un navigateur réel. |
 | T38 | Lien e-mail direct | Ouvre le client de messagerie | ⚠️ | Lien `mailto:` valide ; ouverture réelle dépend du client installé. |
 | T39 | CV | Aucun téléchargement obsolète | ✅ | Remplacé par une demande de CV à jour. |
@@ -96,7 +96,7 @@
 | T54 | Animation d'entrée du hero | Eyebrow, titre, texte, actions, faits et portrait apparaissent en douceur | ✅ | `rise-soft`, `rise-title`, `portrait-in` ; `animation-fill-mode: both`, état final sans transformation. |
 | T55 | Révélation au défilement | Les blocs sous la ligne de flottaison apparaissent une seule fois | ✅ | `IntersectionObserver` ; 25 cibles au chargement en haut de page ; `.is-visible` puis `unobserve()`. |
 | T56 | Aucun contenu perdu | Rien ne reste masqué dans la fenêtre après un défilement rapide | ✅ | Vérifié après saut direct en bas de page puis remontée : `hiddenInView = 0` à chaque palier. |
-| T57 | Repli sans JS / impression | Le contenu reste visible | ✅ | Sans JS : aucune classe `.reveal`. Impression : `opacity: 1`, `animation: none`, `translate: none`. |
+| T57 | Repli sans JS / impression | Le contenu reste visible | ✅ | Sans JS : aucune classe `.reveal`, formulaire remplacé par un lien e-mail. Impression : `opacity: 1`, `animation: none`, `translate: none`. |
 | T58 | Scrollspy | Le lien de la section visible porte `aria-current="location"` | ✅ | Séquence Profil → Projets → Compétences → Services → Contact ; Contact actif en bas de page. |
 | T59 | Header au défilement | Ombre discrète après le défilement | ✅ | `.is-scrolled` au-delà de 8 px, ombre `0 12px 32px`, variante sombre. |
 | T60 | Navigation fluide | Défilement animé, offset du header respecté, menu refermé | ✅ | `#projets` s'arrête à 88 px (header 72 px + marge) ; menu mobile fermé au clic. |

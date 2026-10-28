@@ -1285,6 +1285,32 @@ a.contact-value:hover {
   line-height: 1.6;
 }
 
+.contact-fallback {
+  display: none;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.6;
+}
+
+.contact-fallback a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-fallback a:hover {
+  color: var(--accent);
+}
+
+html:not(.js) .contact-form {
+  display: none;
+}
+
+html:not(.js) .contact-fallback {
+  display: block;
+}
+
 .field {
   margin-bottom: 1rem;
 }

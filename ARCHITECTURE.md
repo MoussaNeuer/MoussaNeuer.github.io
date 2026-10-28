@@ -47,7 +47,7 @@ Les anciens fichiers `assets/css/style.css`, `assets/js/main.js`, les documents 
 - Navigation principale unique, réutilisée en mobile par disclosure.
 - Contenu éditorial statique : aucun texte de projet n'est généré par JavaScript.
 - Métadonnées SEO dans le `<head>` : title, description, canonical, Open Graph, Twitter, favicon, JSON-LD.
-- Formulaire avec `action="mailto:…"`, `method="post"` et `enctype="text/plain"` pour rester compréhensible sans JavaScript.
+- Formulaire piloté par JavaScript pour préparer un e-mail ; sans JavaScript, un lien e-mail direct remplace le formulaire.
 - Aucune ressource tierce (police système, icônes SVG inline).
 
 ### CSS (`styles.css`)
@@ -77,7 +77,7 @@ IIFE en `"use strict"`, sans dépendance. Six modules logiques :
 5. **Contact** : validation native, construction d'un `mailto:` prérempli, statut lisible ; copie de l'adresse avec repli manuel.
 6. **Animations et défilement** : `IntersectionObserver` pour révéler uniquement les blocs sous la ligne de flottaison, scrollspy `aria-current="location"`, ombre du header via `.is-scrolled`.
 
-Le JavaScript est progressif : sans lui, le contenu, les liens, le formulaire `mailto:` et la navigation restent utilisables. Les classes de révélation ne sont ajoutées que par JavaScript ; une page sans script n'a donc aucun contenu masqué.
+Le JavaScript est progressif : sans lui, le contenu, les liens et la navigation restent utilisables. Les classes de révélation ne sont ajoutées que par JavaScript ; une page sans script n'a donc aucun contenu masqué. Le formulaire interactif est remplacé par un lien `mailto:` direct lorsque JavaScript est absent, ce qui évite un formulaire sans effet.
 
 ## 4. Flux du formulaire
 
