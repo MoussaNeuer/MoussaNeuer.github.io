@@ -59,22 +59,25 @@ Les anciens fichiers `assets/css/style.css`, `assets/js/main.js`, les documents 
   - `880px` : menu mobile et passage en une colonne ;
   - `760px` : projets et services en une colonne ;
   - `620px` : approche, compétences et contact compactés ;
-  - `420px` : très petits écrans.
-- `prefers-reduced-motion` désactive les animations et le défilement fluide.
-- Styles d'impression dédiés.
+  - `420px` : très petits écrans ;
+  - `360px` : ajustements extrêmes (shell, titre, colonnes de faits).
+- Animations discrètes : entrée du hero, portrait, révélation au défilement, survol des cartes, ombre du header et lien de navigation actif.
+- `prefers-reduced-motion` désactive les animations, les révélations et le défilement fluide.
+- Styles d'impression dédiés, avec contenu révélé et contrôles masqués.
 - Aucune police web : pas de requête réseau ni de Flash of Unstyled Text.
 
 ### JavaScript (`script.js`)
 
-IIFE en `"use strict"`, sans dépendance. Cinq modules logiques :
+IIFE en `"use strict"`, sans dépendance. Six modules logiques :
 
 1. **Stockage** : `localStorage` encapsulé dans `try/catch`.
 2. **Thème** : bascule clair/sombre, `aria-pressed`, persistance, suivi du système si aucune préférence.
 3. **Navigation mobile** : disclosure non modal, `aria-expanded`, fermeture par Échap, clic extérieur, clic sur un lien et passage au desktop.
 4. **Filtres projets** : `hidden`, `aria-pressed`, compteur `aria-live`.
 5. **Contact** : validation native, construction d'un `mailto:` prérempli, statut lisible ; copie de l'adresse avec repli manuel.
+6. **Animations et défilement** : `IntersectionObserver` pour révéler uniquement les blocs sous la ligne de flottaison, scrollspy `aria-current="location"`, ombre du header via `.is-scrolled`.
 
-Le JavaScript est progressif : sans lui, le contenu, les liens, le formulaire `mailto:` et la navigation restent utilisables.
+Le JavaScript est progressif : sans lui, le contenu, les liens, le formulaire `mailto:` et la navigation restent utilisables. Les classes de révélation ne sont ajoutées que par JavaScript ; une page sans script n'a donc aucun contenu masqué.
 
 ## 4. Flux du formulaire
 

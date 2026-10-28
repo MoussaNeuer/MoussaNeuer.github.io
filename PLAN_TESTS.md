@@ -22,12 +22,14 @@
 | ID | Largeur | Attendu | Statut | Note |
 |---|---|---|---|---|
 | T08 | 320 px | Aucun débordement horizontal, une colonne | ✅ | `scrollWidth = clientWidth` (304 px utiles, barre de défilement comprise). |
+| T08b | 360 px | Aucun débordement, titre et faits ajustés | ✅ | 0 débordement ; `hero h1` à 3 rem, shell à 0,85 rem. |
 | T09 | 375 px | Aucun débordement, menu mobile | ✅ | 0 débordement, menu visible. |
 | T10 | 768 px | Deux colonnes de projets, hero une colonne | ✅ | 0 débordement. |
 | T11 | 1024 px | Navigation desktop, grilles deux colonnes | ✅ | Menu masqué, nav statique, 0 débordement. |
 | T12 | 1440 px | Mise en page desktop complète | ✅ | 0 débordement. |
-| T13 | Sans JavaScript | Contenu et navigation utilisables | ✅ | Test par retrait de la classe `.js` : nav visible, boutons de thème/menu masqués, 0 débordement. |
-| T14 | Impression | Sections lisibles, contrôles masqués | ⚠️ | Règles `@media print` présentes ; rendu PDF non vérifié. |
+| T13 | Sans JavaScript | Contenu et navigation utilisables | ✅ | Test par iframe `sandbox` sans scripts à 375 et 1024 px : 0 classe `.reveal`, 0 texte masqué, nav visible, 0 débordement. |
+| T14 | Impression | Sections lisibles, contrôles masqués | ⚠️ | Règles `@media print` présentes, dont la neutralisation de `.reveal` ; rendu PDF non vérifié. |
+| T14b | Ouverture directe `file://` | Site fonctionnel sans serveur | ⚠️ | Non testable dans le navigateur intégré, qui refuse les URLs `file://` ; à vérifier par double-clic. |
 
 ## 3. Navigation et clavier
 
@@ -87,7 +89,20 @@
 | T46 | Métadonnées | Canonical, OG, Twitter et JSON-LD cohérents | ✅ | URL unique `https://moussaneuer.github.io/`. |
 | T47 | Image de partage | 1200×630, accessible | ✅ | Fichier présent et référencé. |
 
-## 8. Liens et déploiement
+## 8. Animations et navigation au défilement
+
+| ID | Test | Attendu | Statut | Note |
+|---|---|---|---|---|
+| T54 | Animation d'entrée du hero | Eyebrow, titre, texte, actions, faits et portrait apparaissent en douceur | ✅ | `rise-soft`, `rise-title`, `portrait-in` ; `animation-fill-mode: both`, état final sans transformation. |
+| T55 | Révélation au défilement | Les blocs sous la ligne de flottaison apparaissent une seule fois | ✅ | `IntersectionObserver` ; 25 cibles au chargement en haut de page ; `.is-visible` puis `unobserve()`. |
+| T56 | Aucun contenu perdu | Rien ne reste masqué dans la fenêtre après un défilement rapide | ✅ | Vérifié après saut direct en bas de page puis remontée : `hiddenInView = 0` à chaque palier. |
+| T57 | Repli sans JS / impression | Le contenu reste visible | ✅ | Sans JS : aucune classe `.reveal`. Impression : `opacity: 1`, `animation: none`, `translate: none`. |
+| T58 | Scrollspy | Le lien de la section visible porte `aria-current="location"` | ✅ | Séquence Profil → Projets → Compétences → Services → Contact ; Contact actif en bas de page. |
+| T59 | Header au défilement | Ombre discrète après le défilement | ✅ | `.is-scrolled` au-delà de 8 px, ombre `0 12px 32px`, variante sombre. |
+| T60 | Navigation fluide | Défilement animé, offset du header respecté, menu refermé | ✅ | `#projets` s'arrête à 88 px (header 72 px + marge) ; menu mobile fermé au clic. |
+| T61 | Survol et révélation | Les deux animations ne se neutralisent pas | ✅ | Révélation en `translate`, survol en `transform` ; transition de survol conservée. |
+
+## 9. Liens et déploiement
 
 | ID | Test | Attendu | Statut | Note |
 |---|---|---|---|---|
@@ -98,15 +113,17 @@
 | T52 | Android Chrome | Mise en page, menu, formulaire | ⬜ | À tester sur appareil réel. |
 | T53 | Après publication | HTTPS, canonical, sitemap, OG | ⬜ | À faire après fusion sur `main`. |
 
-## 9. Scénario manuel de recette avant publication
+## 10. Scénario manuel de recette avant publication
 
 1. Ouvrir le site en `file://` puis via un serveur local.
 2. À 320 px, vérifier l'absence de défilement horizontal et la lisibilité.
 3. Ouvrir le menu, parcourir les liens au clavier, fermer avec Échap.
-4. Basculer le thème, recharger, vérifier la persistance.
-5. Filtrer chaque catégorie et vérifier les compteurs.
-6. Envoyer un formulaire valide et vérifier le message prérempli dans un vrai client.
-7. Cliquer sur chaque lien externe.
-8. Vérifier le rendu avec `prefers-reduced-motion` activé.
-9. Lancer Lighthouse sur mobile et desktop, puis PageSpeed Insights après déploiement.
-10. Vérifier l'image de partage sur LinkedIn et X après publication.
+4. Cliquer sur « Projets » depuis le menu : vérifier le défilement fluide, l'arrêt sous le header et le lien actif.
+5. Faire défiler lentement la page : vérifier l'apparition des blocs, l'ombre du header et le changement de lien actif.
+6. Basculer le thème, recharger, vérifier la persistance.
+7. Filtrer chaque catégorie et vérifier les compteurs.
+8. Envoyer un formulaire valide et vérifier le message prérempli dans un vrai client.
+9. Cliquer sur chaque lien externe.
+10. Vérifier le rendu avec `prefers-reduced-motion` activé, puis désactivé.
+11. Lancer Lighthouse sur mobile et desktop, puis PageSpeed Insights après déploiement.
+12. Vérifier l'image de partage sur LinkedIn et X après publication.

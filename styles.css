@@ -31,6 +31,8 @@
   --shell: 1180px;
   --section-space: clamp(4.5rem, 9vw, 8rem);
   --radius: 2px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="dark"] {
@@ -274,7 +276,7 @@ strong {
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.2s var(--ease-soft), border-color 0.2s var(--ease-soft), color 0.2s var(--ease-soft), transform 0.25s var(--ease-out);
 }
 
 .button-primary {
@@ -307,6 +309,16 @@ strong {
   z-index: 50;
   border-bottom: 1px solid var(--line);
   background: var(--bg);
+  transition: box-shadow 0.3s var(--ease-soft), border-color 0.3s var(--ease-soft);
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--line-strong);
+  box-shadow: 0 12px 32px rgba(17, 17, 15, 0.07);
+}
+
+[data-theme="dark"] .site-header.is-scrolled {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
 .header-inner {
@@ -371,8 +383,13 @@ strong {
 }
 
 .nav-list a:hover::after,
-.nav-list a:focus-visible::after {
+.nav-list a:focus-visible::after,
+.nav-list a[aria-current="location"]::after {
   transform: scaleX(1);
+}
+
+.nav-list a[aria-current="location"] {
+  color: var(--text);
 }
 
 .nav-cta {
@@ -770,7 +787,7 @@ strong {
   flex-direction: column;
   border: 1px solid var(--line);
   background: var(--surface);
-  transition: border-color 0.2s ease;
+  transition: transform 0.35s var(--ease-out), border-color 0.25s var(--ease-soft), box-shadow 0.35s var(--ease-out);
 }
 
 .project:hover {
@@ -1093,6 +1110,7 @@ strong {
   padding: clamp(1.5rem, 3vw, 2.25rem);
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  transition: background-color 0.3s var(--ease-soft);
 }
 
 .service-number {
@@ -1426,6 +1444,97 @@ a.contact-value:hover {
   color: var(--accent);
 }
 
+/* ---------- Mouvements ---------- */
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .project:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+  }
+
+  .service:hover {
+    background: var(--surface);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy .eyebrow {
+    animation: rise-soft 0.6s var(--ease-out) both;
+  }
+
+  .hero h1 {
+    animation: rise-title 0.75s var(--ease-out) both;
+  }
+
+  .hero-lede {
+    animation: rise-soft 0.65s 0.08s var(--ease-out) both;
+  }
+
+  .hero-actions {
+    animation: rise-soft 0.65s 0.16s var(--ease-out) both;
+  }
+
+  .hero-facts {
+    animation: rise-soft 0.65s 0.24s var(--ease-out) both;
+  }
+
+  .portrait {
+    animation: portrait-in 1s 0.1s var(--ease-out) both;
+  }
+
+  .reveal {
+    opacity: 0;
+  }
+
+  .reveal.is-visible {
+    animation: reveal-in 0.65s var(--ease-out) var(--reveal-delay, 0s) both;
+  }
+}
+
+@keyframes rise-soft {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rise-title {
+  from {
+    transform: translateY(16px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes portrait-in {
+  from {
+    transform: scale(1.02) translateY(8px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1024px) {
@@ -1542,6 +1651,10 @@ a.contact-value:hover {
 
   .js .nav-list a::after {
     display: none;
+  }
+
+  .js .nav-list a[aria-current="location"] {
+    color: var(--accent);
   }
 
   .js .nav-cta {
@@ -1703,6 +1816,26 @@ a.contact-value:hover {
   }
 }
 
+@media (max-width: 360px) {
+  .shell {
+    padding-right: 0.85rem;
+    padding-left: 0.85rem;
+  }
+
+  .brand {
+    font-size: 1.3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-facts div {
+    grid-template-columns: 5.6rem minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+}
+
 /* ---------- Reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1713,6 +1846,7 @@ a.contact-value:hover {
   *,
   *::before,
   *::after {
+    animation-delay: 0s !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
@@ -1721,6 +1855,16 @@ a.contact-value:hover {
 
   .portrait:hover img {
     filter: grayscale(1) contrast(1.03);
+  }
+
+  .reveal {
+    opacity: 1;
+    translate: none;
+  }
+
+  .button:hover,
+  .project:hover {
+    transform: none;
   }
 }
 
@@ -1765,5 +1909,12 @@ a.contact-value:hover {
   .project,
   .service {
     margin-bottom: 1rem;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1 !important;
+    animation: none !important;
+    translate: none !important;
   }
 }

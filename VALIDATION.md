@@ -41,6 +41,13 @@ Environnement : Chromium intégré, viewport de la fenêtre d'aperçu (531 px), 
 | Ancres et header sticky | ✅ `#projets` à 88 px du haut |
 | Copie de l'e-mail | ⚠️ Presse-papiers bloqué dans l'outil ; le repli affiche l'adresse et le statut |
 | Sans JavaScript | ✅ Navigation visible, boutons JS masqués, aucun débordement |
+| Animations d'entrée du hero | ✅ `rise-soft`, `rise-title` et `portrait-in` appliquées, puis `transform: none` |
+| Révélation au défilement | ✅ 25 cibles au chargement en haut de page ; `.is-visible` ajouté par `IntersectionObserver` |
+| Contenu masqué par erreur | ✅ Aucun élément `.reveal` non révélé présent dans la fenêtre, même après saut direct en bas de page |
+| Scrollspy | ✅ `#apropos`, `#projets`, `#competences`, `#services`, `#contact` activés dans l'ordre ; `#contact` actif en bas de page |
+| Ombre du header | ✅ `.site-header.is-scrolled` ajouté au-delà de 8 px ; ombre calculée `0 12px 32px` |
+| Navigation fluide | ✅ Défilement animé, `#projets` s'arrête à 88 px du haut, menu mobile refermé |
+| Survol des cartes | ✅ `transform` de survol conservé malgré la révélation (`translate` séparé) |
 
 ### 1.3 Responsive
 
@@ -49,6 +56,7 @@ Test par iframes de largeur imposée, contenu réel chargé dans chacune.
 | Largeur | Débordement horizontal | Colonnes projets | Menu |
 |---|---|---|---|
 | 320 px | 0 px | 1 | mobile |
+| 360 px | 0 px | 1 | mobile |
 | 375 px | 0 px | 1 | mobile |
 | 768 px | 0 px | 2 | mobile |
 | 1024 px | 0 px | 2 | desktop |
@@ -65,6 +73,8 @@ Audit de l'onglet sur `http://127.0.0.1:8123/` :
 | SEO | **100** |
 
 Le premier passage signalait un échec `label-content-name-mismatch` sur sept liens. Les `aria-label` ont été remplacés par du texte visible complété d'un libellé masqué. Le second passage ne remonte **aucun échec**.
+
+Un passage supplémentaire a été effectué après l'ajout des animations, du scrollspy et de l'état du header : **100 / 100 / 100**, aucun échec.
 
 > L'outil Lighthouse intégré ne fournit pas de score de performance. Aucun score de performance n'est donc annoncé.
 
@@ -90,12 +100,14 @@ Le premier passage signalait un échec `label-content-name-mismatch` sur sept li
 |---|---|---|
 | Score de performance Lighthouse / Web Vitals | Non fourni par l'outil intégré | Chrome DevTools ou PageSpeed Insights après déploiement |
 | `prefers-reduced-motion` en conditions réelles | Pas d'émulation disponible dans l'outil | DevTools → Rendering → Emulate CSS media feature |
+| Animations sur appareil réel | Pas d'appareil disponible | Vérifier le rendu sur iPhone et Android, y compris le défilement lent |
 | Copie dans le presse-papiers | Permission refusée dans le navigateur de test | Clic réel dans Chrome/Safari |
 | Ouverture réelle du client e-mail | Dépend du système | Test avec Gmail/Outlook/Apple Mail |
 | Safari iOS | Pas d'appareil disponible | iPhone réel ou Simulator |
 | Android Chrome | Pas d'appareil disponible | Appareil réel |
 | GitHub Pages | Aucun déploiement effectué | Fusion sur `main` puis vérification post-publication |
 | Rendu imprimé | Non exporté en PDF | Aperçu avant impression |
+| Ouverture directe en `file://` | Le navigateur intégré refuse les URLs `file://` | Ouvrir `index.html` par double-clic dans Chrome, Edge et Firefox |
 | Lecteur d'écran | Non testé | NVDA/VoiceOver sur les parcours principaux |
 
 ## 3. Points de vigilance confirmés
@@ -108,7 +120,7 @@ Le premier passage signalait un échec `label-content-name-mismatch` sur sept li
 
 ## 4. Verdict
 
-La V2 est **prête pour relecture et tests manuels complémentaires**. Elle ne doit pas être publiée avant :
+La V2 est **prête pour relecture et tests manuels complémentaires**. Les animations, le scrollspy, l'état du header et la navigation fluide ont été vérifiés dans Chromium. Elle ne doit pas être publiée avant :
 
 - confirmation de l'adresse e-mail et du CV ;
 - validation des rôles et statuts de projets ;

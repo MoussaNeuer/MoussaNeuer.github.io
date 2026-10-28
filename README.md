@@ -79,6 +79,8 @@ Ouvrir `index.html` dans le navigateur. Le site fonctionne sans serveur ; le lie
 |---|---|
 | Thème clair/sombre | Bouton accessible, `aria-pressed`, persistance `localStorage` protégée, suivi du thème système. |
 | Navigation mobile | Disclosure non modal, `aria-expanded`, fermeture par Échap, clic extérieur ou clic sur un lien. |
+| Navigation au défilement | Défilement fluide, lien actif `aria-current="location"`, ombre du header au scroll. |
+| Animations | Entrée du hero, révélation des blocs par `IntersectionObserver`, survol des cartes ; désactivées avec `prefers-reduced-motion`. |
 | Filtres projets | Boutons `aria-pressed`, compteur, annonce `aria-live`. |
 | Formulaire | Prépare un e-mail via `mailto:` ; aucun envoi automatique, aucune donnée stockée. |
 | Copie de l'e-mail | Bouton avec retour visuel et repli manuel si le presse-papiers est indisponible. |
