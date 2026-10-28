@@ -118,19 +118,20 @@ Contrôles effectués sur <https://moussaneuer.github.io/> après le déploiemen
 
 ### 1.7 Header responsive et PWA
 
-Mise à jour du 28 octobre 2026, testée en local avant publication.
+Mise à jour du 28 octobre 2026, testée en local puis sur le site publié (commit `b4e2e8b`).
 
 | Contrôle | Résultat |
 |---|---|
 | Header 320 / 360 / 375 / 420 / 531 / 768 / 860 px | ✅ Icônes alignées à droite, écart constant avec le bord du shell, aucun débordement |
 | Header 880 / 881 / 1024 / 1280 px | ✅ Bascule mobile/desktop propre, icônes alignées, aucun débordement |
+| Header live 320 → 1280 px | ✅ Mêmes résultats sur <https://moussaneuer.github.io/> |
 | Menu mobile à 375 px | ✅ Panneau sous le header, `aria-expanded`, fermeture par Échap, focus rendu |
 | Header sans JavaScript | ✅ Navigation visible, icônes à droite, 0 débordement |
 | Manifeste | ✅ 200, `application/manifest+json`, `standalone`, `start_url` et `scope` sur `/` |
 | Icônes | ✅ 192×192, 512×512, maskable 512×512, Apple 180×180, générées depuis le portrait |
-| Service worker | ✅ Actif, contrôle la page, cache `moussa-lo-portfolio-v2` |
+| Service worker | ✅ Actif et contrôlant la page en local et en ligne, cache `moussa-lo-portfolio-v2` |
 | Mode hors ligne | ✅ Serveur arrêté : page, styles, 6 projets et portrait servis depuis le cache, 0 erreur console |
-| Lighthouse local après modifications | ✅ Accessibilité 100, bonnes pratiques 100, SEO 100, aucun échec |
+| Lighthouse local et live | ✅ Accessibilité 100, bonnes pratiques 100, SEO 100, aucun échec |
 
 > Le service worker ne s'enregistre qu'en HTTPS ou sur `localhost` ; en `file://`, le site reste entièrement fonctionnel sans mode hors ligne.
 

@@ -132,7 +132,7 @@
 
 | ID | Test | Attendu | Statut | Note |
 |---|---|---|---|---|
-| T62 | Header de 320 à 880 px | Icônes alignées à droite, aucun débordement, menu visible | ✅ | 320 / 360 / 375 / 420 / 531 / 768 / 860 px : écart constant avec le bord droit du shell. |
+| T62 | Header de 320 à 880 px | Icônes alignées à droite, aucun débordement, menu visible | ✅ | 320 / 360 / 375 / 420 / 531 / 768 / 860 px en local et en ligne : écart constant avec le bord droit du shell. |
 | T63 | Header à partir de 881 px | Navigation desktop, icônes alignées à droite | ✅ | 880 / 881 / 1024 / 1280 px : bascule propre, aucun débordement. |
 | T64 | Menu mobile à 375 px | Panneau sous le header, fermeture par Échap, focus rendu | ✅ | Panneau de 0 à 360 px, `aria-expanded="true"` puis `false`, focus rendu au bouton. |
 | T65 | Header sans JavaScript | Navigation visible, icônes à droite | ✅ | Header sur deux lignes, icônes alignées, 0 débordement. |
@@ -141,3 +141,4 @@
 | T68 | Service worker | Enregistré, activé, contrôle la page | ✅ | `sw.js` à la racine, cache `moussa-lo-portfolio-v2` avec 12 ressources. |
 | T69 | Mode hors ligne | Page, styles, projets et portrait disponibles sans serveur | ✅ | Serveur arrêté puis rechargement : titre, 6 projets, CSS chargé, 0 erreur console. |
 | T70 | Sans JavaScript | La PWA ne bloque rien | ✅ | Aucun enregistrement SW sans JS ; contenu, navigation et formulaire de repli inchangés. |
+| T71 | PWA en ligne | Manifeste, icônes et service worker servis par GitHub Pages | ✅ | `manifest.webmanifest` : 200 `application/manifest+json` ; `sw.js` et les 4 icônes : 200 ; SW activé et contrôlant la page ; Lighthouse 100/100/100. |

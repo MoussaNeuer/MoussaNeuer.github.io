@@ -146,8 +146,8 @@ Derniers résultats connus :
 | Structure HTML / ancres / assets | 0 erreur |
 | Console navigateur | 0 erreur |
 | 320 / 375 / 768 / 1024 / 1440 px | Aucun débordement horizontal |
-| Header 320 → 1280 px | Icônes alignées à droite, navigation mobile fonctionnelle |
-| PWA manifeste / icônes / service worker | HTTP 200, service worker actif, mode hors ligne vérifié |
+| Header 320 → 1280 px | Icônes alignées à droite, navigation mobile fonctionnelle (local et live) |
+| PWA manifeste / icônes / service worker | HTTP 200, service worker actif en local et en ligne, mode hors ligne vérifié |
 | Lighthouse accessibilité | 100 (local et live) |
 | Lighthouse bonnes pratiques | 100 (local et live) |
 | Lighthouse SEO | 100 (local et live) |
