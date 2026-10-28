@@ -203,7 +203,7 @@ Le portfolio est **100% responsive** avec des breakpoints :
 ## 📞 Contact
 
 Pour toute question ou collaboration :
-- 📧 Email : moussaneuer06@gmail.com
+- 📧 Email : ml.moussalo1@gmail.com
 - 📱 WhatsApp : +221 76 846 18 53
 - 🔗 LinkedIn : [Moussa LO](https://www.linkedin.com/in/moussa-neuer-lo-b8b0b93a8)
 - 💻 GitHub : [MoussaNeuer](https://github.com/MoussaNeuer)
