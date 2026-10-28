@@ -128,6 +128,7 @@ La refonte est **publiée** sur <https://moussaneuer.github.io/> depuis le 28 oc
 7. **Assets** : image OG 1200×630, favicons, portrait WebP en deux tailles ; aucune capture non vérifiée.
 8. **Dépendances** : EmailJS, Font Awesome, Google Fonts et CDN supprimés.
 9. **Anciens fichiers** : retirés de la V2, conservés dans `backup-v1`.
+10. **PWA** : manifeste, service worker et icônes 192/512/maskable générées depuis le portrait ; header mobile réaligné le 28 octobre 2026.
 
 ### Critères d'acceptation
 
@@ -144,6 +145,8 @@ La refonte est **publiée** sur <https://moussaneuer.github.io/> depuis le 28 oc
 | Aucun secret ou clé privée | ✅ |
 | Aucune erreur JavaScript bloquante | ✅ |
 | Lighthouse accessibilité / bonnes pratiques / SEO | ✅ 100 / 100 / 100 |
+| Header responsive 320–1280 px | ✅ icônes alignées à droite, 0 débordement |
+| PWA installable et hors ligne | ✅ manifeste, service worker, icônes issues du portrait |
 | Performance Lighthouse | ⬜ non mesurée |
 | Safari iOS et Chrome desktop réels | ⬜ à faire |
 | Validation manuelle de Moussa | ✅ publication demandée explicitement le 28/10/2026 |

@@ -458,4 +458,21 @@
   if (year) {
     year.textContent = String(new Date().getFullYear());
   }
+
+  /* ---------- PWA (service worker) ---------- */
+
+  var isLocalHost =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1";
+
+  if (
+    "serviceWorker" in navigator &&
+    (window.location.protocol === "https:" || isLocalHost)
+  ) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js").catch(function () {
+        /* Le site reste pleinement utilisable sans service worker. */
+      });
+    });
+  }
 })();

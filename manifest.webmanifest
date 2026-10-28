@@ -1,0 +1,35 @@
+{
+  "id": "/",
+  "name": "Moussa Lo — Développeur web & designer UI/UX",
+  "short_name": "Moussa Lo",
+  "description": "Portfolio de Moussa Lo, développeur web et designer UI/UX à Dakar : sites vitrines, e-commerce et applications de gestion.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f7f6f2",
+  "theme_color": "#f7f6f2",
+  "categories": ["portfolio", "business", "design"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -116,6 +116,24 @@ Contrôles effectués sur <https://moussaneuer.github.io/> après le déploiemen
 
 > Le cache GitHub Pages (`max-age=600`) peut retarder la prise en compte d'une nouvelle feuille de style. Les vérifications ci-dessus ont été faites avec un paramètre de version lorsque nécessaire.
 
+### 1.7 Header responsive et PWA
+
+Mise à jour du 28 octobre 2026, testée en local avant publication.
+
+| Contrôle | Résultat |
+|---|---|
+| Header 320 / 360 / 375 / 420 / 531 / 768 / 860 px | ✅ Icônes alignées à droite, écart constant avec le bord du shell, aucun débordement |
+| Header 880 / 881 / 1024 / 1280 px | ✅ Bascule mobile/desktop propre, icônes alignées, aucun débordement |
+| Menu mobile à 375 px | ✅ Panneau sous le header, `aria-expanded`, fermeture par Échap, focus rendu |
+| Header sans JavaScript | ✅ Navigation visible, icônes à droite, 0 débordement |
+| Manifeste | ✅ 200, `application/manifest+json`, `standalone`, `start_url` et `scope` sur `/` |
+| Icônes | ✅ 192×192, 512×512, maskable 512×512, Apple 180×180, générées depuis le portrait |
+| Service worker | ✅ Actif, contrôle la page, cache `moussa-lo-portfolio-v2` |
+| Mode hors ligne | ✅ Serveur arrêté : page, styles, 6 projets et portrait servis depuis le cache, 0 erreur console |
+| Lighthouse local après modifications | ✅ Accessibilité 100, bonnes pratiques 100, SEO 100, aucun échec |
+
+> Le service worker ne s'enregistre qu'en HTTPS ou sur `localhost` ; en `file://`, le site reste entièrement fonctionnel sans mode hors ligne.
+
 ## 2. Tests non exécutés ou partiels
 
 | Test | Raison | À faire |
@@ -141,7 +159,7 @@ Contrôles effectués sur <https://moussaneuer.github.io/> après le déploiemen
 
 ## 4. Verdict
 
-La V2 est **publiée** sur <https://moussaneuer.github.io/>. Les animations, le scrollspy, l'état du header et la navigation fluide ont été vérifiés dans Chromium, en local puis en ligne, et les contrôles automatiques passent.
+La V2 est **publiée** sur <https://moussaneuer.github.io/>. Une mise à jour du 28 octobre 2026 corrige l'alignement du header mobile et ajoute le mode PWA (manifeste, icônes issues du portrait, service worker hors ligne). Les animations, le scrollspy, l'état du header et la navigation fluide ont été vérifiés dans Chromium, en local puis en ligne, et les contrôles automatiques passent.
 
 Restent à valider manuellement :
 

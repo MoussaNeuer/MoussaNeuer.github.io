@@ -16,15 +16,21 @@ Toute la logique tient dans trois fichiers à la racine : `index.html`, `styles.
 portfolio/
 ├── index.html              # Structure, contenu, SEO, JSON-LD
 ├── styles.css              # Design system, thèmes, responsive, impression
-├── script.js               # Thème, menu, filtres, formulaire, copie
+├── script.js               # Thème, menu, filtres, formulaire, copie, PWA
+├── manifest.webmanifest    # Manifeste PWA
+├── sw.js                   # Service worker et cache hors ligne
 ├── assets/
+│   ├── icons/                  # Icônes PWA générées depuis le portrait
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
+│   │   ├── icon-maskable-512.png
+│   │   └── apple-touch-icon.png
 │   └── images/
 │       ├── moussa-480.webp     # Portrait, source principale
 │       ├── moussa.webp         # Portrait haute résolution (srcset)
 │       ├── og-cover.png        # Image de partage 1200×630
 │       ├── favicon.svg         # Favicon vectoriel
-│       ├── favicon-32.png      # Favicon PNG
-│       └── apple-touch-icon.png
+│       └── favicon-32.png      # Favicon PNG
 ├── robots.txt
 ├── sitemap.xml
 ├── .htaccess               # Optionnel : Apache uniquement
@@ -68,7 +74,7 @@ Les anciens fichiers `assets/css/style.css`, `assets/js/main.js`, les documents 
 
 ### JavaScript (`script.js`)
 
-IIFE en `"use strict"`, sans dépendance. Six modules logiques :
+IIFE en `"use strict"`, sans dépendance. Sept modules logiques :
 
 1. **Stockage** : `localStorage` encapsulé dans `try/catch`.
 2. **Thème** : bascule clair/sombre, `aria-pressed`, persistance, suivi du système si aucune préférence.
@@ -76,8 +82,18 @@ IIFE en `"use strict"`, sans dépendance. Six modules logiques :
 4. **Filtres projets** : `hidden`, `aria-pressed`, compteur `aria-live`.
 5. **Contact** : validation native, construction d'un `mailto:` prérempli, statut lisible ; copie de l'adresse avec repli manuel.
 6. **Animations et défilement** : `IntersectionObserver` pour révéler uniquement les blocs sous la ligne de flottaison, scrollspy `aria-current="location"`, ombre du header via `.is-scrolled`.
+7. **PWA** : enregistrement du service worker en HTTPS ou sur `localhost`, sans bloquer le site en cas d'échec.
 
 Le JavaScript est progressif : sans lui, le contenu, les liens et la navigation restent utilisables. Les classes de révélation ne sont ajoutées que par JavaScript ; une page sans script n'a donc aucun contenu masqué. Le formulaire interactif est remplacé par un lien `mailto:` direct lorsque JavaScript est absent, ce qui évite un formulaire sans effet.
+
+### PWA (`manifest.webmanifest` + `sw.js`)
+
+- Manifeste à la racine : `name`, `short_name`, `start_url` et `scope` sur `/`, `display: standalone`, couleurs claire, icônes 192/512 et maskable.
+- Icônes dans `assets/icons/`, générées depuis `assets/images/moussa.webp` avec un cadrage carré centré sur le visage.
+- Service worker enregistré uniquement en HTTPS ou sur `localhost` ; il est sans effet en `file://`.
+- Stratégie : réseau d'abord pour la navigation, le CSS, le JS et le manifeste ; cache d'abord avec rafraîchissement en arrière-plan pour les images ; repli sur `index.html` hors ligne.
+- `CACHE_NAME` doit être incrémenté lors d'un changement de logique ou d'icônes pour purger l'ancien cache.
+- Aucune notification push, aucune synchronisation en arrière-plan, aucune donnée envoyée.
 
 ## 4. Flux du formulaire
 
@@ -99,7 +115,7 @@ Ouverture du logiciel de messagerie de l'utilisateur
 L'utilisateur relit et envoie lui-même
 ```
 
-Aucune donnée n'est stockée, transmise ou mesurée par le site. Sans JavaScript, le formulaire utilise son `action="mailto:"` natif.
+Aucune donnée n'est stockée, transmise ou mesurée par le site. Sans JavaScript, le formulaire est masqué et remplacé par un lien e-mail direct.
 
 ## 5. Flux du thème
 

@@ -1607,6 +1607,14 @@ html:not(.js) .contact-fallback {
 }
 
 @media (max-width: 880px) {
+  .header-inner {
+    gap: 1rem;
+  }
+
+  .header-tools {
+    margin-left: auto;
+  }
+
   html:not(.js) .header-inner {
     flex-wrap: wrap;
     padding-top: 0.75rem;

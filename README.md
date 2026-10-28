@@ -3,9 +3,9 @@
 Refonte statique du portfolio de **Moussa Lo**, développeur web et designer UI/UX à Dakar.
 
 - **Site en ligne** : <https://moussaneuer.github.io/>
-- **Branches** : `main` (publication) et `portfolio-v2` (travail), toutes deux au commit `799eead`
+- **Branches** : `main` (publication) et `portfolio-v2` (travail), synchronisées
 - **Branche de sauvegarde** : `backup-v1`
-- **État** : refonte **publiée** le 28 octobre 2026.
+- **État** : refonte **publiée** le 28 octobre 2026 ; mise à jour PWA et header mobile appliquée le même jour.
 
 > GitHub Pages sert la V2 depuis la branche `main` du dépôt `MoussaNeuer/MoussaNeuer.github.io`.
 
@@ -28,6 +28,7 @@ Aucun chiffre, client, témoignage ou résultat n'est inventé. Les informations
 - JavaScript natif (IIFE, `"use strict"`, aucune dépendance)
 - Aucun framework, aucun npm, aucun build, aucun back-end
 - Compatible GitHub Pages et ouverture directe de `index.html`
+- PWA installable : manifeste, service worker, icônes générées depuis le portrait
 
 ## Structure
 
@@ -36,14 +37,20 @@ portfolio/
 ├── index.html
 ├── styles.css
 ├── script.js
+├── manifest.webmanifest
+├── sw.js
 ├── assets/
+│   ├── icons/
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
+│   │   ├── icon-maskable-512.png
+│   │   └── apple-touch-icon.png
 │   └── images/
 │       ├── moussa-480.webp
 │       ├── moussa.webp
 │       ├── og-cover.png
 │       ├── favicon.svg
-│       ├── favicon-32.png
-│       └── apple-touch-icon.png
+│       └── favicon-32.png
 ├── robots.txt
 ├── sitemap.xml
 ├── .htaccess               # Optionnel, Apache uniquement
@@ -71,7 +78,7 @@ Avec WAMP, le dossier est aussi accessible via `http://localhost/portfolio/`.
 
 ### Option 2 — ouverture directe
 
-Ouvrir `index.html` dans le navigateur. Le site fonctionne sans serveur ; le lien `mailto:` et les ancres restent opérationnels.
+Ouvrir `index.html` dans le navigateur. Le site fonctionne sans serveur ; le lien `mailto:` et les ancres restent opérationnels. Le manifeste et le service worker, eux, nécessitent `http://localhost` ou HTTPS.
 
 ## Fonctionnalités
 
@@ -80,6 +87,8 @@ Ouvrir `index.html` dans le navigateur. Le site fonctionne sans serveur ; le lie
 | Thème clair/sombre | Bouton accessible, `aria-pressed`, persistance `localStorage` protégée, suivi du thème système. |
 | Navigation mobile | Disclosure non modal, `aria-expanded`, fermeture par Échap, clic extérieur ou clic sur un lien. |
 | Navigation au défilement | Défilement fluide, lien actif `aria-current="location"`, ombre du header au scroll. |
+| Header responsive | Sous 881 px, le menu devient un panneau et les icônes restent alignées à droite du header. |
+| PWA | Manifeste, icônes 192/512 et maskable générées depuis le portrait, service worker avec cache hors ligne. |
 | Animations | Entrée du hero, révélation des blocs par `IntersectionObserver`, survol des cartes ; désactivées avec `prefers-reduced-motion`. |
 | Filtres projets | Boutons `aria-pressed`, compteur, annonce `aria-live`. |
 | Formulaire | Prépare un e-mail via `mailto:` ; aucun envoi automatique, aucune donnée stockée. Sans JavaScript, un lien e-mail direct remplace le formulaire. |
@@ -137,6 +146,8 @@ Derniers résultats connus :
 | Structure HTML / ancres / assets | 0 erreur |
 | Console navigateur | 0 erreur |
 | 320 / 375 / 768 / 1024 / 1440 px | Aucun débordement horizontal |
+| Header 320 → 1280 px | Icônes alignées à droite, navigation mobile fonctionnelle |
+| PWA manifeste / icônes / service worker | HTTP 200, service worker actif, mode hors ligne vérifié |
 | Lighthouse accessibilité | 100 (local et live) |
 | Lighthouse bonnes pratiques | 100 (local et live) |
 | Lighthouse SEO | 100 (local et live) |
@@ -170,6 +181,8 @@ Après un déploiement, vérifier :
 
 > GitHub Pages peut servir un fichier en cache jusqu'à 10 minutes (`Cache-Control: max-age=600`). Ajouter un paramètre de version (`styles.css?v=…`) pour forcer la vérification d'une nouvelle version.
 
+> Après une modification des icônes ou de la logique hors ligne, incrémenter `CACHE_NAME` dans `sw.js` pour purger l'ancien cache.
+
 ## Sauvegarde et retour arrière
 
 - Branche `backup-v1` : snapshot complet de la V1.
@@ -183,6 +196,7 @@ Les anciens fichiers `assets/css/style.css`, `assets/js/main.js`, les documents 
 - Aucun analytics, aucun cookie, aucun script tiers.
 - Aucune donnée de formulaire n'est stockée ni transmise.
 - Le bouton de copie utilise uniquement le presse-papiers local du navigateur.
+- Le service worker met en cache les fichiers du site sur l'appareil pour le mode hors ligne ; aucune donnée n'est envoyée.
 - Les liens externes s'ouvrent dans un nouvel onglet avec `rel="noopener noreferrer"`.
 
 ## Limites connues
@@ -191,6 +205,8 @@ Les anciens fichiers `assets/css/style.css`, `assets/js/main.js`, les documents 
 - Aucune capture réelle de projet n'est affichée : les visuels sont typographiques et l'indiquent.
 - Le CV public est retiré tant qu'une version à jour n'est pas fournie.
 - Le dépôt SeneCard n'est plus public (404 au 28/10/2026).
+- La PWA s'installe et fonctionne hors ligne après une première visite ; elle n'utilise ni notifications push ni synchronisation en arrière-plan.
+- Les icônes PWA sont générées depuis le portrait du site ; toute nouvelle photo nécessite de régénérer `assets/icons/`.
 - Les tests Safari iOS, Android et lecteur d'écran restent à faire.
 
 ## Contact
@@ -203,4 +219,4 @@ Les anciens fichiers `assets/css/style.css`, `assets/js/main.js`, les documents 
 ---
 
 **Dernière mise à jour** : 28 octobre 2026  
-**Version** : 2.0 — publiée sur `main` (commit `799eead`).
+**Version** : 2.1 — PWA installable et header mobile corrigé.

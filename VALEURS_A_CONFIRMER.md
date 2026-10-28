@@ -58,7 +58,7 @@ Les technologies listées proviennent des projets et du CV :
 
 | Élément | État | À confirmer |
 |---|---|---|
-| Portrait | `moussa.webp` / `moussa-480.webp` | La photo est-elle autorisée et toujours représentative ? |
+| Portrait | `moussa.webp` / `moussa-480.webp`, icônes PWA dans `assets/icons/` | La photo est-elle autorisée, toujours représentative, et utilisable comme icône d'application ? |
 | Captures de projets | Aucune capture réelle ; visuels typographiques assumés | Fournir des captures authentiques si elles doivent remplacer les visuels. |
 | Image OG | `og-cover.png` générée | Vérifiée en ligne (PNG 1200×630, HTTP 200). Valider le rendu sur LinkedIn/X. |
 | Favicon | SVG + PNG générés | Valider le rendu dans les onglets et sur mobile. |
